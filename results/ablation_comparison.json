@@ -1,0 +1,94 @@
+{
+  "baseline_rule_based": {
+    "system": "Baseline (Rule-based only + TF-IDF)",
+    "n_pairs": 32,
+    "precision": 0.957,
+    "recall": 0.688,
+    "f1": 0.8,
+    "accuracy": 0.828,
+    "per_error_type": {
+      "numeric_substitution": {
+        "caught": 16,
+        "total": 18,
+        "catch_rate": 0.889
+      },
+      "entity_swap": {
+        "caught": 2,
+        "total": 4,
+        "catch_rate": 0.5
+      },
+      "negation": {
+        "caught": 3,
+        "total": 6,
+        "catch_rate": 0.5
+      },
+      "unsupported_addition": {
+        "caught": 1,
+        "total": 4,
+        "catch_rate": 0.25
+      },
+      "date_change": {
+        "caught": 0,
+        "total": 0,
+        "catch_rate": 0.0
+      },
+      "causal_distortion": {
+        "caught": 0,
+        "total": 0,
+        "catch_rate": 0.0
+      }
+    }
+  },
+  "upgraded_sbert_nli": {
+    "system": "Upgraded (Rule-based + SBERT + RoBERTa-NLI)",
+    "n_pairs": 77,
+    "precision": 0.986,
+    "recall": 0.935,
+    "f1": 0.96,
+    "accuracy": 0.961,
+    "per_error_type": {
+      "causal_distortion": {
+        "total": 6,
+        "caught": 3,
+        "catch_rate": 0.5,
+        "caught_lenient": 6,
+        "lenient_catch_rate": 1.0
+      },
+      "date_change": {
+        "total": 8,
+        "caught": 8,
+        "catch_rate": 1.0,
+        "caught_lenient": 8,
+        "lenient_catch_rate": 1.0
+      },
+      "entity_swap": {
+        "total": 15,
+        "caught": 15,
+        "catch_rate": 1.0,
+        "caught_lenient": 15,
+        "lenient_catch_rate": 1.0
+      },
+      "negation": {
+        "total": 12,
+        "caught": 12,
+        "catch_rate": 1.0,
+        "caught_lenient": 12,
+        "lenient_catch_rate": 1.0
+      },
+      "numeric_substitution": {
+        "total": 25,
+        "caught": 25,
+        "catch_rate": 1.0,
+        "caught_lenient": 25,
+        "lenient_catch_rate": 1.0
+      },
+      "unsupported_addition": {
+        "total": 11,
+        "caught": 9,
+        "catch_rate": 0.818,
+        "caught_lenient": 11,
+        "lenient_catch_rate": 1.0
+      }
+    }
+  }
+}

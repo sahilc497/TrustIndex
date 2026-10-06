@@ -1,0 +1,733 @@
+{
+  "metadata": {
+    "analysis_name": "TRUST Index Final Unseen-Subset Analysis",
+    "date": "2026-10-06",
+    "description": "Evaluation of TRUST Index verification performance on cases not present in the original 77-case benchmark.",
+    "subsets": {
+      "subset_a_held_out_11": 11,
+      "subset_b_newly_constructed_31": 31,
+      "subset_c_combined_unseen_42": 42,
+      "historical_original_77_eval": 88,
+      "total_validation_set": 130
+    }
+  },
+  "subset_a_held_out_11": {
+    "name": "Subset A - Previously Held-Out (N=11)",
+    "n_samples": 11,
+    "three_way_accuracy": 0.9091,
+    "three_way_confusion_matrix": {
+      "Trusted": {
+        "Trusted": 6,
+        "Uncertain": 0,
+        "Hallucinated": 0
+      },
+      "Uncertain": {
+        "Trusted": 0,
+        "Uncertain": 0,
+        "Hallucinated": 0
+      },
+      "Hallucinated": {
+        "Trusted": 0,
+        "Uncertain": 1,
+        "Hallucinated": 4
+      }
+    },
+    "binary_accuracy": 1.0,
+    "hallucination_detection": {
+      "tp": 5,
+      "fp": 0,
+      "fn": 0,
+      "tn": 6,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "specificity": 1.0
+    },
+    "supported_perspective": {
+      "tp": 6,
+      "fp": 0,
+      "fn": 0,
+      "tn": 5,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "specificity": 1.0
+    },
+    "safety_violations_invalid_to_trusted": {
+      "count": 0,
+      "denominator": 5,
+      "rate": 0.0
+    },
+    "score_stats_by_expected_status": {
+      "Trusted": {
+        "n": 6,
+        "mean": 100.0,
+        "median": 100.0,
+        "std": 0.0,
+        "min": 100.0,
+        "max": 100.0,
+        "iqr": 0.0
+      },
+      "Hallucinated": {
+        "n": 5,
+        "mean": 10.0,
+        "median": 0.0,
+        "std": 20.0,
+        "min": 0.0,
+        "max": 50.0,
+        "iqr": 0.0
+      }
+    },
+    "score_stats_by_case_type": {
+      "Case Type 1: Correct + Supported": {
+        "n": 6,
+        "mean": 100.0,
+        "median": 100.0,
+        "std": 0.0,
+        "min": 100.0,
+        "max": 100.0,
+        "iqr": 0.0
+      },
+      "Case Type 8: Entity Substitution": {
+        "n": 5,
+        "mean": 10.0,
+        "median": 0.0,
+        "std": 20.0,
+        "min": 0.0,
+        "max": 50.0,
+        "iqr": 0.0
+      }
+    }
+  },
+  "subset_b_newly_constructed_31": {
+    "name": "Subset B - Newly Constructed (N=31)",
+    "n_samples": 31,
+    "three_way_accuracy": 0.871,
+    "three_way_confusion_matrix": {
+      "Trusted": {
+        "Trusted": 0,
+        "Uncertain": 0,
+        "Hallucinated": 0
+      },
+      "Uncertain": {
+        "Trusted": 0,
+        "Uncertain": 21,
+        "Hallucinated": 4
+      },
+      "Hallucinated": {
+        "Trusted": 0,
+        "Uncertain": 0,
+        "Hallucinated": 6
+      }
+    },
+    "binary_accuracy": 1.0,
+    "hallucination_detection": {
+      "tp": 31,
+      "fp": 0,
+      "fn": 0,
+      "tn": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "specificity": 0.0
+    },
+    "supported_perspective": {
+      "tp": 0,
+      "fp": 0,
+      "fn": 0,
+      "tn": 31,
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "specificity": 1.0
+    },
+    "safety_violations_invalid_to_trusted": {
+      "count": 0,
+      "denominator": 31,
+      "rate": 0.0
+    },
+    "score_stats_by_expected_status": {
+      "Uncertain": {
+        "n": 25,
+        "mean": 42.0,
+        "median": 50.0,
+        "std": 18.33,
+        "min": 0.0,
+        "max": 50.0,
+        "iqr": 0.0
+      },
+      "Hallucinated": {
+        "n": 6,
+        "mean": 0.0,
+        "median": 0.0,
+        "std": 0.0,
+        "min": 0.0,
+        "max": 0.0,
+        "iqr": 0.0
+      }
+    },
+    "score_stats_by_case_type": {
+      "Case Type 2: Incorrect + Unsupported": {
+        "n": 3,
+        "mean": 50.0,
+        "median": 50.0,
+        "std": 0.0,
+        "min": 50.0,
+        "max": 50.0,
+        "iqr": 0.0
+      },
+      "Case Type 3: Contradictory": {
+        "n": 6,
+        "mean": 0.0,
+        "median": 0.0,
+        "std": 0.0,
+        "min": 0.0,
+        "max": 0.0,
+        "iqr": 0.0
+      },
+      "Case Type 4: Partially Supported": {
+        "n": 12,
+        "mean": 41.67,
+        "median": 50.0,
+        "std": 18.63,
+        "min": 0.0,
+        "max": 50.0,
+        "iqr": 0.0
+      },
+      "Case Type 5: Irrelevant Evidence": {
+        "n": 10,
+        "mean": 40.0,
+        "median": 50.0,
+        "std": 20.0,
+        "min": 0.0,
+        "max": 50.0,
+        "iqr": 0.0
+      }
+    }
+  },
+  "subset_c_combined_unseen_42": {
+    "name": "Subset C - Combined Unseen (N=42)",
+    "n_samples": 42,
+    "three_way_accuracy": 0.881,
+    "three_way_confusion_matrix": {
+      "Trusted": {
+        "Trusted": 6,
+        "Uncertain": 0,
+        "Hallucinated": 0
+      },
+      "Uncertain": {
+        "Trusted": 0,
+        "Uncertain": 21,
+        "Hallucinated": 4
+      },
+      "Hallucinated": {
+        "Trusted": 0,
+        "Uncertain": 1,
+        "Hallucinated": 10
+      }
+    },
+    "binary_accuracy": 1.0,
+    "hallucination_detection": {
+      "tp": 36,
+      "fp": 0,
+      "fn": 0,
+      "tn": 6,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "specificity": 1.0
+    },
+    "supported_perspective": {
+      "tp": 6,
+      "fp": 0,
+      "fn": 0,
+      "tn": 36,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "specificity": 1.0
+    },
+    "safety_violations_invalid_to_trusted": {
+      "count": 0,
+      "denominator": 36,
+      "rate": 0.0
+    },
+    "score_stats_by_expected_status": {
+      "Trusted": {
+        "n": 6,
+        "mean": 100.0,
+        "median": 100.0,
+        "std": 0.0,
+        "min": 100.0,
+        "max": 100.0,
+        "iqr": 0.0
+      },
+      "Uncertain": {
+        "n": 25,
+        "mean": 42.0,
+        "median": 50.0,
+        "std": 18.33,
+        "min": 0.0,
+        "max": 50.0,
+        "iqr": 0.0
+      },
+      "Hallucinated": {
+        "n": 11,
+        "mean": 4.55,
+        "median": 0.0,
+        "std": 14.37,
+        "min": 0.0,
+        "max": 50.0,
+        "iqr": 0.0
+      }
+    },
+    "score_stats_by_case_type": {
+      "Case Type 1: Correct + Supported": {
+        "n": 6,
+        "mean": 100.0,
+        "median": 100.0,
+        "std": 0.0,
+        "min": 100.0,
+        "max": 100.0,
+        "iqr": 0.0
+      },
+      "Case Type 8: Entity Substitution": {
+        "n": 5,
+        "mean": 10.0,
+        "median": 0.0,
+        "std": 20.0,
+        "min": 0.0,
+        "max": 50.0,
+        "iqr": 0.0
+      },
+      "Case Type 2: Incorrect + Unsupported": {
+        "n": 3,
+        "mean": 50.0,
+        "median": 50.0,
+        "std": 0.0,
+        "min": 50.0,
+        "max": 50.0,
+        "iqr": 0.0
+      },
+      "Case Type 3: Contradictory": {
+        "n": 6,
+        "mean": 0.0,
+        "median": 0.0,
+        "std": 0.0,
+        "min": 0.0,
+        "max": 0.0,
+        "iqr": 0.0
+      },
+      "Case Type 4: Partially Supported": {
+        "n": 12,
+        "mean": 41.67,
+        "median": 50.0,
+        "std": 18.63,
+        "min": 0.0,
+        "max": 50.0,
+        "iqr": 0.0
+      },
+      "Case Type 5: Irrelevant Evidence": {
+        "n": 10,
+        "mean": 40.0,
+        "median": 50.0,
+        "std": 20.0,
+        "min": 0.0,
+        "max": 50.0,
+        "iqr": 0.0
+      }
+    }
+  },
+  "original_77_eval_88": {
+    "name": "Original 77 Subset (N=88)",
+    "n_samples": 88,
+    "three_way_accuracy": 0.8295,
+    "three_way_confusion_matrix": {
+      "Trusted": {
+        "Trusted": 21,
+        "Uncertain": 3,
+        "Hallucinated": 0
+      },
+      "Uncertain": {
+        "Trusted": 0,
+        "Uncertain": 2,
+        "Hallucinated": 9
+      },
+      "Hallucinated": {
+        "Trusted": 0,
+        "Uncertain": 3,
+        "Hallucinated": 50
+      }
+    },
+    "binary_accuracy": 0.9659,
+    "hallucination_detection": {
+      "tp": 64,
+      "fp": 3,
+      "fn": 0,
+      "tn": 21,
+      "precision": 0.9552,
+      "recall": 1.0,
+      "f1": 0.9771,
+      "specificity": 0.875
+    },
+    "supported_perspective": {
+      "tp": 21,
+      "fp": 0,
+      "fn": 3,
+      "tn": 64,
+      "precision": 1.0,
+      "recall": 0.875,
+      "f1": 0.9333,
+      "specificity": 1.0
+    },
+    "safety_violations_invalid_to_trusted": {
+      "count": 0,
+      "denominator": 64,
+      "rate": 0.0
+    },
+    "score_stats_by_expected_status": {
+      "Trusted": {
+        "n": 24,
+        "mean": 93.75,
+        "median": 100.0,
+        "std": 16.54,
+        "min": 50.0,
+        "max": 100.0,
+        "iqr": 0.0
+      },
+      "Uncertain": {
+        "n": 11,
+        "mean": 9.09,
+        "median": 0.0,
+        "std": 19.28,
+        "min": 0.0,
+        "max": 50.0,
+        "iqr": 0.0
+      },
+      "Hallucinated": {
+        "n": 53,
+        "mean": 2.83,
+        "median": 0.0,
+        "std": 11.55,
+        "min": 0.0,
+        "max": 50.0,
+        "iqr": 0.0
+      }
+    },
+    "score_stats_by_case_type": {
+      "Case Type 1: Correct + Supported": {
+        "n": 24,
+        "mean": 93.75,
+        "median": 100.0,
+        "std": 16.54,
+        "min": 50.0,
+        "max": 100.0,
+        "iqr": 0.0
+      },
+      "Case Type 2: Incorrect + Unsupported": {
+        "n": 11,
+        "mean": 9.09,
+        "median": 0.0,
+        "std": 19.28,
+        "min": 0.0,
+        "max": 50.0,
+        "iqr": 0.0
+      },
+      "Case Type 3: Contradictory": {
+        "n": 6,
+        "mean": 25.0,
+        "median": 25.0,
+        "std": 25.0,
+        "min": 0.0,
+        "max": 50.0,
+        "iqr": 50.0
+      },
+      "Case Type 6: Negation Error": {
+        "n": 12,
+        "mean": 0.0,
+        "median": 0.0,
+        "std": 0.0,
+        "min": 0.0,
+        "max": 0.0,
+        "iqr": 0.0
+      },
+      "Case Type 7: Numerical Error": {
+        "n": 20,
+        "mean": 0.0,
+        "median": 0.0,
+        "std": 0.0,
+        "min": 0.0,
+        "max": 0.0,
+        "iqr": 0.0
+      },
+      "Case Type 8: Entity Substitution": {
+        "n": 15,
+        "mean": 0.0,
+        "median": 0.0,
+        "std": 0.0,
+        "min": 0.0,
+        "max": 0.0,
+        "iqr": 0.0
+      }
+    }
+  },
+  "full_validation_130": {
+    "name": "Full Validation (N=130)",
+    "n_samples": 130,
+    "three_way_accuracy": 0.8462,
+    "three_way_confusion_matrix": {
+      "Trusted": {
+        "Trusted": 27,
+        "Uncertain": 3,
+        "Hallucinated": 0
+      },
+      "Uncertain": {
+        "Trusted": 0,
+        "Uncertain": 23,
+        "Hallucinated": 13
+      },
+      "Hallucinated": {
+        "Trusted": 0,
+        "Uncertain": 4,
+        "Hallucinated": 60
+      }
+    },
+    "binary_accuracy": 0.9769,
+    "hallucination_detection": {
+      "tp": 100,
+      "fp": 3,
+      "fn": 0,
+      "tn": 27,
+      "precision": 0.9709,
+      "recall": 1.0,
+      "f1": 0.9852,
+      "specificity": 0.9
+    },
+    "supported_perspective": {
+      "tp": 27,
+      "fp": 0,
+      "fn": 3,
+      "tn": 100,
+      "precision": 1.0,
+      "recall": 0.9,
+      "f1": 0.9474,
+      "specificity": 1.0
+    },
+    "safety_violations_invalid_to_trusted": {
+      "count": 0,
+      "denominator": 100,
+      "rate": 0.0
+    },
+    "score_stats_by_expected_status": {
+      "Trusted": {
+        "n": 30,
+        "mean": 95.0,
+        "median": 100.0,
+        "std": 15.0,
+        "min": 50.0,
+        "max": 100.0,
+        "iqr": 0.0
+      },
+      "Uncertain": {
+        "n": 36,
+        "mean": 31.94,
+        "median": 50.0,
+        "std": 24.02,
+        "min": 0.0,
+        "max": 50.0,
+        "iqr": 50.0
+      },
+      "Hallucinated": {
+        "n": 64,
+        "mean": 3.12,
+        "median": 0.0,
+        "std": 12.1,
+        "min": 0.0,
+        "max": 50.0,
+        "iqr": 0.0
+      }
+    },
+    "score_stats_by_case_type": {
+      "Case Type 1: Correct + Supported": {
+        "n": 30,
+        "mean": 95.0,
+        "median": 100.0,
+        "std": 15.0,
+        "min": 50.0,
+        "max": 100.0,
+        "iqr": 0.0
+      },
+      "Case Type 2: Incorrect + Unsupported": {
+        "n": 14,
+        "mean": 17.86,
+        "median": 0.0,
+        "std": 23.96,
+        "min": 0.0,
+        "max": 50.0,
+        "iqr": 50.0
+      },
+      "Case Type 3: Contradictory": {
+        "n": 12,
+        "mean": 12.5,
+        "median": 0.0,
+        "std": 21.65,
+        "min": 0.0,
+        "max": 50.0,
+        "iqr": 12.5
+      },
+      "Case Type 4: Partially Supported": {
+        "n": 12,
+        "mean": 41.67,
+        "median": 50.0,
+        "std": 18.63,
+        "min": 0.0,
+        "max": 50.0,
+        "iqr": 0.0
+      },
+      "Case Type 5: Irrelevant Evidence": {
+        "n": 10,
+        "mean": 40.0,
+        "median": 50.0,
+        "std": 20.0,
+        "min": 0.0,
+        "max": 50.0,
+        "iqr": 0.0
+      },
+      "Case Type 6: Negation Error": {
+        "n": 12,
+        "mean": 0.0,
+        "median": 0.0,
+        "std": 0.0,
+        "min": 0.0,
+        "max": 0.0,
+        "iqr": 0.0
+      },
+      "Case Type 7: Numerical Error": {
+        "n": 20,
+        "mean": 0.0,
+        "median": 0.0,
+        "std": 0.0,
+        "min": 0.0,
+        "max": 0.0,
+        "iqr": 0.0
+      },
+      "Case Type 8: Entity Substitution": {
+        "n": 20,
+        "mean": 2.5,
+        "median": 0.0,
+        "std": 10.9,
+        "min": 0.0,
+        "max": 50.0,
+        "iqr": 0.0
+      }
+    }
+  },
+  "comparison_table": {
+    "metrics": [
+      {
+        "metric": "Binary Accuracy",
+        "full_130": 0.9769,
+        "unseen_42": 1.0,
+        "delta": 0.0231
+      },
+      {
+        "metric": "Detection Precision",
+        "full_130": 0.9709,
+        "unseen_42": 1.0,
+        "delta": 0.0291
+      },
+      {
+        "metric": "Detection Recall",
+        "full_130": 1.0,
+        "unseen_42": 1.0,
+        "delta": 0.0
+      },
+      {
+        "metric": "Detection F1",
+        "full_130": 0.9852,
+        "unseen_42": 1.0,
+        "delta": 0.0148
+      },
+      {
+        "metric": "Supported Recall",
+        "full_130": 0.9,
+        "unseen_42": 1.0,
+        "delta": 0.1
+      },
+      {
+        "metric": "Invalid -> Trusted (Safety Violations)",
+        "full_130": "0/100 (0.0%)",
+        "unseen_42": "0/36 (0.0%)",
+        "delta": "0.0%"
+      },
+      {
+        "metric": "3-Way Accuracy",
+        "full_130": 0.8462,
+        "unseen_42": 0.881,
+        "delta": 0.0348
+      }
+    ]
+  },
+  "errors_on_unseen_42": [
+    {
+      "case_id": "val_c8_heldout_03",
+      "provenance": "held_out_10",
+      "case_type": "Case Type 8: Entity Substitution",
+      "expected_status": "Hallucinated",
+      "predicted_status": "Uncertain",
+      "predicted_trust_score": 50.0,
+      "query": "Which internal communication tool is prohibited for sharing access credentials?",
+      "answer": "Access credentials must never be shared over Microsoft Teams or external messaging tools.",
+      "evidence": "Access credentials must never be shared over Slack or external messaging tools.",
+      "error_type": "entity_swap"
+    },
+    {
+      "case_id": "val_c4_part_01",
+      "provenance": "newly_constructed",
+      "case_type": "Case Type 4: Partially Supported",
+      "expected_status": "Uncertain",
+      "predicted_status": "Hallucinated",
+      "predicted_trust_score": 0.0,
+      "query": "What are the annual leave allowances and sabbatical terms?",
+      "answer": "Employees are entitled to 20 annual paid leaves per calendar year, and employees can take unlimited sabbaticals.",
+      "evidence": "Employees are entitled to 20 annual paid leaves per calendar year. Unused annual leave can be carried forward to the next year for a maximum of 1 year.",
+      "error_type": "partially_supported"
+    },
+    {
+      "case_id": "val_c4_part_09",
+      "provenance": "newly_constructed",
+      "case_type": "Case Type 4: Partially Supported",
+      "expected_status": "Uncertain",
+      "predicted_status": "Hallucinated",
+      "predicted_trust_score": 0.0,
+      "query": "What are the approval thresholds for expense claims?",
+      "answer": "Claims below 5,000 INR require only reporting manager approval, and claims above 100,000 INR require approval from the Board of Directors.",
+      "evidence": "All reimbursement claims above 5,000 INR require approval from both the reporting manager and the finance department. Claims below 5,000 INR require only reporting manager approval.",
+      "error_type": "partially_supported"
+    },
+    {
+      "case_id": "val_c5_irrel_02",
+      "provenance": "newly_constructed",
+      "case_type": "Case Type 5: Irrelevant Evidence",
+      "expected_status": "Uncertain",
+      "predicted_status": "Hallucinated",
+      "predicted_trust_score": 0.0,
+      "query": "How many days advance notice is required to request annual leave?",
+      "answer": "Annual leave must be requested at least 3 working days in advance through the HR portal.",
+      "evidence": "Employees on probation (first 90 days of employment) are entitled to 5 paid leaves only.",
+      "error_type": "irrelevant_evidence"
+    },
+    {
+      "case_id": "val_c5_irrel_07",
+      "provenance": "newly_constructed",
+      "case_type": "Case Type 5: Irrelevant Evidence",
+      "expected_status": "Uncertain",
+      "predicted_status": "Hallucinated",
+      "predicted_trust_score": 0.0,
+      "query": "What are the mandatory core working hours for remote employees?",
+      "answer": "All employees must be available online between 10:00 AM and 4:00 PM IST.",
+      "evidence": "The company provides a laptop and a one-time home office setup allowance of 15,000 INR for employees approved for permanent remote work.",
+      "error_type": "irrelevant_evidence"
+    }
+  ]
+}

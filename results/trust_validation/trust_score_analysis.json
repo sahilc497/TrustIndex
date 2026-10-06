@@ -1,0 +1,56 @@
+{
+  "Supported": {
+    "n": 30,
+    "mean": 95.0,
+    "median": 100.0,
+    "std": 15.26,
+    "q25": 100.0,
+    "q75": 100.0,
+    "iqr": 0.0,
+    "min": 50.0,
+    "max": 100.0
+  },
+  "Partially Supported": {
+    "n": 12,
+    "mean": 41.67,
+    "median": 50.0,
+    "std": 19.46,
+    "q25": 50.0,
+    "q75": 50.0,
+    "iqr": 0.0,
+    "min": 0.0,
+    "max": 50.0
+  },
+  "Unsupported": {
+    "n": 24,
+    "mean": 27.08,
+    "median": 50.0,
+    "std": 25.45,
+    "q25": 0.0,
+    "q75": 50.0,
+    "iqr": 50.0,
+    "min": 0.0,
+    "max": 50.0
+  },
+  "Contradictory": {
+    "n": 64,
+    "mean": 3.12,
+    "median": 0.0,
+    "std": 12.2,
+    "q25": 0.0,
+    "q75": 0.0,
+    "iqr": 0.0,
+    "min": 0.0,
+    "max": 50.0
+  },
+  "separation_hypothesis": {
+    "expected_ordering": "Supported > Partially Supported > Unsupported >= Contradictory",
+    "observed_means": {
+      "Supported": 95.0,
+      "Partially Supported": 41.67,
+      "Unsupported": 27.08,
+      "Contradictory": 3.12
+    },
+    "strictly_separated": true
+  }
+}

@@ -1,0 +1,277 @@
+{
+  "total_errors": 20,
+  "component_summary": {
+    "claim extraction": 0,
+    "semantic similarity": 0,
+    "contradiction detection": 20,
+    "evidence graph": 0,
+    "score aggregation": 0,
+    "retrieval/evidence quality": 0,
+    "other": 0,
+    "unknown / requires investigation": 0
+  },
+  "errors": [
+    {
+      "case_id": "val_c1_reimb_07",
+      "case_type": "Case Type 1: Correct + Supported",
+      "expected_status": "Trusted",
+      "predicted_status": "Uncertain",
+      "trust_score": 50.0,
+      "claims": [
+        "No, internet reimbursement is not available to employees on the standard hybrid arrangement"
+      ],
+      "evidence": "This reimbursement is not available to employees on the standard hybrid work arrangement.",
+      "failure_component": "contradiction detection",
+      "failure_explanation": "False alarm on supported answer; NLI neutral confidence on valid claim flagged as Uncertain (score: 50.0)."
+    },
+    {
+      "case_id": "val_c1_wfh_03",
+      "case_type": "Case Type 1: Correct + Supported",
+      "expected_status": "Trusted",
+      "predicted_status": "Uncertain",
+      "trust_score": 50.0,
+      "claims": [
+        "Work-from-home approval must be renewed every 6 months"
+      ],
+      "evidence": "Approval is granted by the direct reporting manager and must be renewed every 6 months.",
+      "failure_component": "contradiction detection",
+      "failure_explanation": "False alarm on supported answer; NLI neutral confidence on valid claim flagged as Uncertain (score: 50.0)."
+    },
+    {
+      "case_id": "val_c1_wfh_08",
+      "case_type": "Case Type 1: Correct + Supported",
+      "expected_status": "Trusted",
+      "predicted_status": "Uncertain",
+      "trust_score": 50.0,
+      "claims": [
+        "No, the home office setup allowance is not provided to employees on the standard hybrid arrangement"
+      ],
+      "evidence": "This allowance is not provided for employees on the standard 2-day hybrid arrangement.",
+      "failure_component": "contradiction detection",
+      "failure_explanation": "False alarm on supported answer; NLI neutral confidence on valid claim flagged as Uncertain (score: 50.0)."
+    },
+    {
+      "case_id": "val_c2_leave_12",
+      "case_type": "Case Type 2: Incorrect + Unsupported",
+      "expected_status": "Uncertain",
+      "predicted_status": "Hallucinated",
+      "trust_score": 0.0,
+      "claims": [
+        "Employees on probation are entitled to 20 paid leaves, the same as confirmed employees"
+      ],
+      "evidence": "Employees on probation (first 90 days of employment) are entitled to 5 paid leaves only.",
+      "failure_component": "contradiction detection",
+      "failure_explanation": "Contradiction detection strictly escalated claim to Hallucinated: Claim contains number(s) ['20'] not present in evidence (evidence contains ['5', '90']); likely numeric substitution."
+    },
+    {
+      "case_id": "val_c2_reimb_02",
+      "case_type": "Case Type 2: Incorrect + Unsupported",
+      "expected_status": "Uncertain",
+      "predicted_status": "Hallucinated",
+      "trust_score": 0.0,
+      "claims": [
+        "Claims submitted after 30 days will automatically be processed with no additional approval needed"
+      ],
+      "evidence": "Claims submitted after 30 days will not be processed except with written approval from the finance director.",
+      "failure_component": "contradiction detection",
+      "failure_explanation": "Contradiction detection strictly escalated claim to Hallucinated: NLI model detected contradiction with evidence (confidence: 1.0)."
+    },
+    {
+      "case_id": "val_c2_reimb_08",
+      "case_type": "Case Type 2: Incorrect + Unsupported",
+      "expected_status": "Uncertain",
+      "predicted_status": "Hallucinated",
+      "trust_score": 0.0,
+      "claims": [
+        "Phone bill reimbursement of up to 500 INR per month is available to all employees"
+      ],
+      "evidence": "Phone bill reimbursement of up to 500 INR per month is available to employees in sales and client-facing roles only.",
+      "failure_component": "contradiction detection",
+      "failure_explanation": "Contradiction detection strictly escalated claim to Hallucinated: NLI model detected contradiction with evidence (confidence: 0.994)."
+    },
+    {
+      "case_id": "val_c2_reimb_09",
+      "case_type": "Case Type 2: Incorrect + Unsupported",
+      "expected_status": "Uncertain",
+      "predicted_status": "Hallucinated",
+      "trust_score": 0.0,
+      "claims": [
+        "Claims above 5,000 INR require approval only from the reporting manager"
+      ],
+      "evidence": "All reimbursement claims above 5,000 INR require approval from both the reporting manager and the finance department.",
+      "failure_component": "contradiction detection",
+      "failure_explanation": "Contradiction detection strictly escalated claim to Hallucinated: NLI model detected contradiction with evidence (confidence: 0.993)."
+    },
+    {
+      "case_id": "val_c2_leave_018",
+      "case_type": "Case Type 2: Incorrect + Unsupported",
+      "expected_status": "Uncertain",
+      "predicted_status": "Hallucinated",
+      "trust_score": 0.0,
+      "claims": [
+        "Full leave entitlements apply automatically after 90 days without requiring written confirmation"
+      ],
+      "evidence": "Full leave entitlements apply once probation is successfully completed and confirmed in writing by the reporting manager.",
+      "failure_component": "contradiction detection",
+      "failure_explanation": "Contradiction detection strictly escalated claim to Hallucinated: NLI model detected contradiction with evidence (confidence: 0.967)."
+    },
+    {
+      "case_id": "val_c2_wfh_011",
+      "case_type": "Case Type 2: Incorrect + Unsupported",
+      "expected_status": "Uncertain",
+      "predicted_status": "Hallucinated",
+      "trust_score": 0.0,
+      "claims": [
+        "Yes, employees on probation can work from home if granted a special written exception by the department head"
+      ],
+      "evidence": "Employees still on probation are not eligible for work from home under any circumstances.",
+      "failure_component": "contradiction detection",
+      "failure_explanation": "Contradiction detection strictly escalated claim to Hallucinated: NLI model detected contradiction with evidence (confidence: 0.863)."
+    },
+    {
+      "case_id": "val_c2_reimb_012",
+      "case_type": "Case Type 2: Incorrect + Unsupported",
+      "expected_status": "Uncertain",
+      "predicted_status": "Hallucinated",
+      "trust_score": 0.0,
+      "claims": [
+        "Any local transport is reimbursed without requiring pre-approval"
+      ],
+      "evidence": "Employees traveling for official business are reimbursed for economy class airfare, train fare, and pre-approved local transport.",
+      "failure_component": "contradiction detection",
+      "failure_explanation": "Contradiction detection strictly escalated claim to Hallucinated: NLI model detected contradiction with evidence (confidence: 0.967)."
+    },
+    {
+      "case_id": "val_c2_reimb_019",
+      "case_type": "Case Type 2: Incorrect + Unsupported",
+      "expected_status": "Uncertain",
+      "predicted_status": "Hallucinated",
+      "trust_score": 0.0,
+      "claims": [
+        "Yes, phone bill reimbursement of up to 500 INR per month is available to all remote employees regardless of role"
+      ],
+      "evidence": "Phone bill reimbursement of up to 500 INR per month is available to employees in sales and client-facing roles only.",
+      "failure_component": "contradiction detection",
+      "failure_explanation": "Contradiction detection strictly escalated claim to Hallucinated: NLI model detected contradiction with evidence (confidence: 0.999)."
+    },
+    {
+      "case_id": "val_c2_reimb_024",
+      "case_type": "Case Type 2: Incorrect + Unsupported",
+      "expected_status": "Uncertain",
+      "predicted_status": "Hallucinated",
+      "trust_score": 0.0,
+      "claims": [
+        "Claims of 2,500 INR require approval from both the reporting manager and the finance department"
+      ],
+      "evidence": "Claims below 5,000 INR require only reporting manager approval.",
+      "failure_component": "contradiction detection",
+      "failure_explanation": "Contradiction detection strictly escalated claim to Hallucinated: Claim contains number(s) ['2500'] not present in evidence (evidence contains ['5000']); likely numeric substitution."
+    },
+    {
+      "case_id": "val_c3_leave_021",
+      "case_type": "Case Type 3: Contradictory",
+      "expected_status": "Hallucinated",
+      "predicted_status": "Uncertain",
+      "trust_score": 50.0,
+      "claims": [
+        "Full leave entitlements apply because the employee reached one full year of continuous tenure"
+      ],
+      "evidence": "Full leave entitlements apply once probation is successfully completed and confirmed in writing by the reporting manager.",
+      "failure_component": "contradiction detection",
+      "failure_explanation": "Contradiction detection failed to identify discrepancy; score remained 50.0 (Uncertain)."
+    },
+    {
+      "case_id": "val_c3_leave_025",
+      "case_type": "Case Type 3: Contradictory",
+      "expected_status": "Hallucinated",
+      "predicted_status": "Uncertain",
+      "trust_score": 50.0,
+      "claims": [
+        "A certificate is required because the employee is still serving their probationary period"
+      ],
+      "evidence": "Sick leave exceeding 3 consecutive days requires a medical certificate submitted to HR within 5 working days of returning to work.",
+      "failure_component": "contradiction detection",
+      "failure_explanation": "Contradiction detection failed to identify discrepancy; score remained 50.0 (Uncertain)."
+    },
+    {
+      "case_id": "val_c3_reimb_018",
+      "case_type": "Case Type 3: Contradictory",
+      "expected_status": "Hallucinated",
+      "predicted_status": "Uncertain",
+      "trust_score": 50.0,
+      "claims": [
+        "It requires finance department approval because the expense was incurred on an international business trip"
+      ],
+      "evidence": "All reimbursement claims above 5,000 INR require approval from both the reporting manager and the finance department.",
+      "failure_component": "contradiction detection",
+      "failure_explanation": "Contradiction detection failed to identify discrepancy; score remained 50.0 (Uncertain)."
+    },
+    {
+      "case_id": "val_c4_part_01",
+      "case_type": "Case Type 4: Partially Supported",
+      "expected_status": "Uncertain",
+      "predicted_status": "Hallucinated",
+      "trust_score": 0.0,
+      "claims": [
+        "Employees are entitled to 20 annual paid leaves per calendar year",
+        "employees can take unlimited sabbaticals"
+      ],
+      "evidence": "Employees are entitled to 20 annual paid leaves per calendar year. Unused annual leave can be carried forward to the next year for a maximum of 1 year.",
+      "failure_component": "contradiction detection",
+      "failure_explanation": "Contradiction detection strictly escalated claim to Hallucinated: NLI model detected contradiction with evidence (confidence: 0.787)."
+    },
+    {
+      "case_id": "val_c4_part_09",
+      "case_type": "Case Type 4: Partially Supported",
+      "expected_status": "Uncertain",
+      "predicted_status": "Hallucinated",
+      "trust_score": 0.0,
+      "claims": [
+        "Claims below 5,000 INR require only reporting manager approval",
+        "claims above 100,000 INR require approval from the Board of Directors"
+      ],
+      "evidence": "All reimbursement claims above 5,000 INR require approval from both the reporting manager and the finance department. Claims below 5,000 INR require only reporting manager approval.",
+      "failure_component": "contradiction detection",
+      "failure_explanation": "Contradiction detection strictly escalated claim to Hallucinated: Claim contains number(s) ['100000'] not present in evidence (evidence contains ['5000']); likely numeric substitution."
+    },
+    {
+      "case_id": "val_c5_irrel_02",
+      "case_type": "Case Type 5: Irrelevant Evidence",
+      "expected_status": "Uncertain",
+      "predicted_status": "Hallucinated",
+      "trust_score": 0.0,
+      "claims": [
+        "Annual leave must be requested at least 3 working days in advance through the HR portal"
+      ],
+      "evidence": "Employees on probation (first 90 days of employment) are entitled to 5 paid leaves only.",
+      "failure_component": "contradiction detection",
+      "failure_explanation": "Contradiction detection strictly escalated claim to Hallucinated: Claim contains number(s) ['3'] not present in evidence (evidence contains ['5', '90']); likely numeric substitution."
+    },
+    {
+      "case_id": "val_c5_irrel_07",
+      "case_type": "Case Type 5: Irrelevant Evidence",
+      "expected_status": "Uncertain",
+      "predicted_status": "Hallucinated",
+      "trust_score": 0.0,
+      "claims": [
+        "All employees must be available online between 10:00 AM and 4:00 PM IST"
+      ],
+      "evidence": "The company provides a laptop and a one-time home office setup allowance of 15,000 INR for employees approved for permanent remote work.",
+      "failure_component": "contradiction detection",
+      "failure_explanation": "Contradiction detection strictly escalated claim to Hallucinated: Claim contains number(s) ['00', '10', '4'] not present in evidence (evidence contains ['15000']); likely numeric substitution."
+    },
+    {
+      "case_id": "val_c8_heldout_03",
+      "case_type": "Case Type 8: Entity Substitution",
+      "expected_status": "Hallucinated",
+      "predicted_status": "Uncertain",
+      "trust_score": 50.0,
+      "claims": [
+        "Access credentials must never be shared over Microsoft Teams or external messaging tools"
+      ],
+      "evidence": "Access credentials must never be shared over Slack or external messaging tools.",
+      "failure_component": "contradiction detection",
+      "failure_explanation": "Contradiction detection failed to identify discrepancy; score remained 50.0 (Uncertain)."
+    }
+  ]
+}

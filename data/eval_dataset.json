@@ -1,0 +1,772 @@
+[
+  {
+    "id": "leave_01",
+    "query": "How many annual paid leaves do employees get?",
+    "source_doc": "hr_policy_leave.txt",
+    "source_passage": "Employees are entitled to 20 annual paid leaves per calendar year.",
+    "correct_answer": "Employees are entitled to 20 annual paid leaves per calendar year.",
+    "hallucinated_answer": "Employees are entitled to 30 annual paid leaves per calendar year.",
+    "error_type": "numeric_substitution",
+    "error_explanation": "20 was changed to 30."
+  },
+  {
+    "id": "leave_02",
+    "query": "Can unused annual leave be carried forward?",
+    "source_doc": "hr_policy_leave.txt",
+    "source_passage": "Unused annual leave can be carried forward to the next year for a maximum of 1 year.",
+    "correct_answer": "Yes, unused annual leave can be carried forward for a maximum of 1 year.",
+    "hallucinated_answer": "Yes, unused annual leave can be carried forward for a maximum of 2 years.",
+    "error_type": "numeric_substitution",
+    "error_explanation": "1 year was changed to 2 years."
+  },
+  {
+    "id": "leave_03",
+    "query": "How much advance notice is required to request annual leave?",
+    "source_doc": "hr_policy_leave.txt",
+    "source_passage": "Annual leave must be requested at least 3 working days in advance through the HR portal.",
+    "correct_answer": "Annual leave must be requested at least 3 working days in advance.",
+    "hallucinated_answer": "Annual leave must be requested at least 7 working days in advance.",
+    "error_type": "numeric_substitution",
+    "error_explanation": "3 working days was changed to 7 working days."
+  },
+  {
+    "id": "leave_04",
+    "query": "Are employees paid out for unused annual leave when they resign?",
+    "source_doc": "hr_policy_leave.txt",
+    "source_passage": "Employees who resign are paid out for unused annual leave at their final gross salary rate.",
+    "correct_answer": "Yes, employees who resign are paid out for unused annual leave at their final gross salary rate.",
+    "hallucinated_answer": "No, employees who resign are not paid out for unused annual leave.",
+    "error_type": "negation",
+    "error_explanation": "The entitlement was negated; the policy says they ARE paid out."
+  },
+  {
+    "id": "leave_05",
+    "query": "How many sick leaves do employees get per year?",
+    "source_doc": "hr_policy_leave.txt",
+    "source_passage": "Employees receive 10 paid sick leaves per calendar year.",
+    "correct_answer": "Employees receive 10 paid sick leaves per calendar year.",
+    "hallucinated_answer": "Employees receive 15 paid sick leaves per calendar year.",
+    "error_type": "numeric_substitution",
+    "error_explanation": "10 was changed to 15."
+  },
+  {
+    "id": "leave_06",
+    "query": "When is a medical certificate required for sick leave?",
+    "source_doc": "hr_policy_leave.txt",
+    "source_passage": "Sick leave exceeding 3 consecutive days requires a medical certificate submitted to HR within 5 working days of returning to work.",
+    "correct_answer": "A medical certificate is required if sick leave exceeds 3 consecutive days, and must be submitted within 5 working days of returning.",
+    "hallucinated_answer": "A medical certificate is required if sick leave exceeds 2 consecutive days, and must be submitted within 5 working days of returning.",
+    "error_type": "numeric_substitution",
+    "error_explanation": "3 consecutive days was changed to 2 consecutive days."
+  },
+  {
+    "id": "leave_07",
+    "query": "Can unused sick leave be carried forward?",
+    "source_doc": "hr_policy_leave.txt",
+    "source_passage": "Sick leave cannot be carried forward and unused sick leave is not paid out upon resignation.",
+    "correct_answer": "No, sick leave cannot be carried forward and is not paid out upon resignation.",
+    "hallucinated_answer": "Yes, sick leave can be carried forward to the next year.",
+    "error_type": "negation",
+    "error_explanation": "The policy explicitly says sick leave CANNOT be carried forward."
+  },
+  {
+    "id": "leave_08",
+    "query": "How many weeks of maternity leave are female employees entitled to?",
+    "source_doc": "hr_policy_leave.txt",
+    "source_passage": "Female employees are entitled to 26 weeks of paid maternity leave.",
+    "correct_answer": "Female employees are entitled to 26 weeks of paid maternity leave.",
+    "hallucinated_answer": "Female employees are entitled to 12 weeks of paid maternity leave.",
+    "error_type": "numeric_substitution",
+    "error_explanation": "26 weeks was changed to 12 weeks."
+  },
+  {
+    "id": "leave_09",
+    "query": "How many weeks of paternity leave do male employees get?",
+    "source_doc": "hr_policy_leave.txt",
+    "source_passage": "Male employees are entitled to 2 weeks of paid paternity leave.",
+    "correct_answer": "Male employees are entitled to 2 weeks of paid paternity leave.",
+    "hallucinated_answer": "Male employees are entitled to 26 weeks of paid paternity leave.",
+    "error_type": "entity_swap",
+    "error_explanation": "The maternity leave figure (26 weeks) was incorrectly attributed to paternity leave."
+  },
+  {
+    "id": "leave_10",
+    "query": "How far in advance must maternity leave be applied for?",
+    "source_doc": "hr_policy_leave.txt",
+    "source_passage": "Maternity leave must be applied for at least 8 weeks before the expected delivery date.",
+    "correct_answer": "Maternity leave must be applied for at least 8 weeks before the expected delivery date.",
+    "hallucinated_answer": "Maternity leave must be applied for at least 4 weeks before the expected delivery date.",
+    "error_type": "numeric_substitution",
+    "error_explanation": "8 weeks was changed to 4 weeks."
+  },
+  {
+    "id": "leave_11",
+    "query": "How many weeks of adoption leave are available?",
+    "source_doc": "hr_policy_leave.txt",
+    "source_passage": "Adoption leave of 12 weeks is available to employees who legally adopt a child under the age of 1.",
+    "correct_answer": "Adoption leave of 12 weeks is available to employees who adopt a child under the age of 1.",
+    "hallucinated_answer": "Adoption leave of 12 weeks is available to employees who adopt a child under the age of 5.",
+    "error_type": "numeric_substitution",
+    "error_explanation": "Age limit of 1 was changed to 5."
+  },
+  {
+    "id": "leave_12",
+    "query": "How many paid leaves are employees on probation entitled to?",
+    "source_doc": "hr_policy_leave.txt",
+    "source_passage": "Employees on probation (first 90 days of employment) are entitled to 5 paid leaves only.",
+    "correct_answer": "Employees on probation are entitled to 5 paid leaves only, during the first 90 days of employment.",
+    "hallucinated_answer": "Employees on probation are entitled to 20 paid leaves, the same as confirmed employees.",
+    "error_type": "unsupported_addition",
+    "error_explanation": "Claims probation employees get full entitlement, which contradicts the stated 5-leave limit."
+  },
+  {
+    "id": "wfh_01",
+    "query": "Who is eligible to apply for work from home?",
+    "source_doc": "hr_policy_wfh.txt",
+    "source_passage": "Employees who have completed 6 months of continuous employment are eligible to apply for work-from-home arrangements.",
+    "correct_answer": "Employees who have completed 6 months of continuous employment are eligible to apply for work from home.",
+    "hallucinated_answer": "Employees who have completed 3 months of continuous employment are eligible to apply for work from home.",
+    "error_type": "numeric_substitution",
+    "error_explanation": "6 months was changed to 3 months."
+  },
+  {
+    "id": "wfh_02",
+    "query": "Are employees on probation eligible for work from home?",
+    "source_doc": "hr_policy_wfh.txt",
+    "source_passage": "Employees still on probation are not eligible for work from home under any circumstances.",
+    "correct_answer": "No, employees on probation are not eligible for work from home under any circumstances.",
+    "hallucinated_answer": "Yes, employees on probation are eligible for work from home with manager approval.",
+    "error_type": "negation",
+    "error_explanation": "The policy states probation employees are NOT eligible under any circumstances."
+  },
+  {
+    "id": "wfh_03",
+    "query": "How often must work-from-home approval be renewed?",
+    "source_doc": "hr_policy_wfh.txt",
+    "source_passage": "Approval is granted by the direct reporting manager and must be renewed every 6 months.",
+    "correct_answer": "Work-from-home approval must be renewed every 6 months.",
+    "hallucinated_answer": "Work-from-home approval must be renewed every 12 months.",
+    "error_type": "numeric_substitution",
+    "error_explanation": "6 months was changed to 12 months."
+  },
+  {
+    "id": "wfh_04",
+    "query": "How many days per week can eligible employees work from home?",
+    "source_doc": "hr_policy_wfh.txt",
+    "source_passage": "Eligible employees may work from home up to 2 days per week.",
+    "correct_answer": "Eligible employees may work from home up to 2 days per week.",
+    "hallucinated_answer": "Eligible employees may work from home up to 3 days per week.",
+    "error_type": "numeric_substitution",
+    "error_explanation": "2 days was changed to 3 days."
+  },
+  {
+    "id": "wfh_05",
+    "query": "How many work-from-home days do customer-facing employees get?",
+    "source_doc": "hr_policy_wfh.txt",
+    "source_passage": "Employees in customer-facing roles may work from home up to 1 day per week only.",
+    "correct_answer": "Employees in customer-facing roles may work from home up to 1 day per week only.",
+    "hallucinated_answer": "Employees in customer-facing roles may work from home up to 2 days per week.",
+    "error_type": "entity_swap",
+    "error_explanation": "The general 2-day limit was incorrectly applied to customer-facing roles, which are limited to 1 day."
+  },
+  {
+    "id": "wfh_06",
+    "query": "Who must approve full-time remote work?",
+    "source_doc": "hr_policy_wfh.txt",
+    "source_passage": "Full-time remote work (5 days per week) requires written approval from the department head and HR director jointly.",
+    "correct_answer": "Full-time remote work requires written approval from both the department head and the HR director.",
+    "hallucinated_answer": "Full-time remote work requires written approval from the reporting manager only.",
+    "error_type": "entity_swap",
+    "error_explanation": "Approval authority was changed from department head + HR director to reporting manager."
+  },
+  {
+    "id": "wfh_07",
+    "query": "What is the home office setup allowance for permanent remote employees?",
+    "source_doc": "hr_policy_wfh.txt",
+    "source_passage": "The company provides a laptop and a one-time home office setup allowance of 15,000 INR for employees approved for permanent remote work.",
+    "correct_answer": "Permanent remote employees receive a one-time home office setup allowance of 15,000 INR, plus a laptop.",
+    "hallucinated_answer": "Permanent remote employees receive a one-time home office setup allowance of 25,000 INR, plus a laptop.",
+    "error_type": "numeric_substitution",
+    "error_explanation": "15,000 INR was changed to 25,000 INR."
+  },
+  {
+    "id": "wfh_08",
+    "query": "Is the home office setup allowance available to hybrid employees?",
+    "source_doc": "hr_policy_wfh.txt",
+    "source_passage": "This allowance is not provided for employees on the standard 2-day hybrid arrangement.",
+    "correct_answer": "No, the home office setup allowance is not provided to employees on the standard hybrid arrangement.",
+    "hallucinated_answer": "Yes, hybrid employees also receive the home office setup allowance.",
+    "error_type": "negation",
+    "error_explanation": "The policy explicitly excludes hybrid employees from this allowance."
+  },
+  {
+    "id": "wfh_09",
+    "query": "What are the core hours employees must be available?",
+    "source_doc": "hr_policy_wfh.txt",
+    "source_passage": "All employees, whether working from home or office, must be available online between 10:00 AM and 4:00 PM IST, referred to as core hours.",
+    "correct_answer": "All employees must be available online between 10:00 AM and 4:00 PM IST.",
+    "hallucinated_answer": "All employees must be available online between 9:00 AM and 6:00 PM IST.",
+    "error_type": "numeric_substitution",
+    "error_explanation": "Core hours 10 AM-4 PM were changed to 9 AM-6 PM."
+  },
+  {
+    "id": "wfh_10",
+    "query": "How much advance notice is required for meetings outside core hours?",
+    "source_doc": "hr_policy_wfh.txt",
+    "source_passage": "Meetings scheduled outside core hours require 24 hours advance notice.",
+    "correct_answer": "Meetings scheduled outside core hours require 24 hours of advance notice.",
+    "hallucinated_answer": "Meetings scheduled outside core hours require 48 hours of advance notice.",
+    "error_type": "numeric_substitution",
+    "error_explanation": "24 hours was changed to 48 hours."
+  },
+  {
+    "id": "reimb_01",
+    "query": "Within how many days must reimbursement claims be submitted?",
+    "source_doc": "hr_policy_reimbursement.txt",
+    "source_passage": "Reimbursement claims must be submitted within 30 days of the expense being incurred.",
+    "correct_answer": "Reimbursement claims must be submitted within 30 days of the expense being incurred.",
+    "hallucinated_answer": "Reimbursement claims must be submitted within 60 days of the expense being incurred.",
+    "error_type": "numeric_substitution",
+    "error_explanation": "30 days was changed to 60 days."
+  },
+  {
+    "id": "reimb_02",
+    "query": "Can late reimbursement claims still be processed?",
+    "source_doc": "hr_policy_reimbursement.txt",
+    "source_passage": "Claims submitted after 30 days will not be processed except with written approval from the finance director.",
+    "correct_answer": "Claims after 30 days will not be processed unless the finance director gives written approval.",
+    "hallucinated_answer": "Claims submitted after 30 days will automatically be processed with no additional approval needed.",
+    "error_type": "unsupported_addition",
+    "error_explanation": "Falsely claims automatic processing when finance director approval is actually required."
+  },
+  {
+    "id": "reimb_03",
+    "query": "What is the daily meal allowance for domestic travel?",
+    "source_doc": "hr_policy_reimbursement.txt",
+    "source_passage": "Employees on official travel receive a daily meal allowance of 1,200 INR within India and 40 USD for international travel.",
+    "correct_answer": "The daily meal allowance for travel within India is 1,200 INR.",
+    "hallucinated_answer": "The daily meal allowance for travel within India is 2,000 INR.",
+    "error_type": "numeric_substitution",
+    "error_explanation": "1,200 INR was changed to 2,000 INR."
+  },
+  {
+    "id": "reimb_04",
+    "query": "What is the daily meal allowance for international travel?",
+    "source_doc": "hr_policy_reimbursement.txt",
+    "source_passage": "Employees on official travel receive a daily meal allowance of 1,200 INR within India and 40 USD for international travel.",
+    "correct_answer": "The daily meal allowance for international travel is 40 USD.",
+    "hallucinated_answer": "The daily meal allowance for international travel is 1,200 INR, same as domestic travel.",
+    "error_type": "entity_swap",
+    "error_explanation": "The domestic (INR) allowance was incorrectly substituted for the international (USD) allowance."
+  },
+  {
+    "id": "reimb_05",
+    "query": "Is alcohol reimbursable during official travel?",
+    "source_doc": "hr_policy_reimbursement.txt",
+    "source_passage": "Alcohol is not reimbursable under any circumstances.",
+    "correct_answer": "No, alcohol is not reimbursable under any circumstances.",
+    "hallucinated_answer": "Yes, alcohol is reimbursable up to a limited amount during official travel.",
+    "error_type": "negation",
+    "error_explanation": "The policy states alcohol is not reimbursable under any circumstances."
+  },
+  {
+    "id": "reimb_06",
+    "query": "What is the monthly internet reimbursement for permanent remote employees?",
+    "source_doc": "hr_policy_reimbursement.txt",
+    "source_passage": "Employees approved for permanent remote work receive a monthly internet reimbursement of 1,000 INR.",
+    "correct_answer": "Permanent remote employees receive a monthly internet reimbursement of 1,000 INR.",
+    "hallucinated_answer": "Permanent remote employees receive a monthly internet reimbursement of 3,000 INR.",
+    "error_type": "numeric_substitution",
+    "error_explanation": "1,000 INR was changed to 3,000 INR."
+  },
+  {
+    "id": "reimb_07",
+    "query": "Do hybrid employees get internet reimbursement?",
+    "source_doc": "hr_policy_reimbursement.txt",
+    "source_passage": "This reimbursement is not available to employees on the standard hybrid work arrangement.",
+    "correct_answer": "No, internet reimbursement is not available to employees on the standard hybrid arrangement.",
+    "hallucinated_answer": "Yes, hybrid employees also receive the internet reimbursement.",
+    "error_type": "negation",
+    "error_explanation": "The policy explicitly excludes hybrid employees from internet reimbursement."
+  },
+  {
+    "id": "reimb_08",
+    "query": "Who is eligible for phone bill reimbursement?",
+    "source_doc": "hr_policy_reimbursement.txt",
+    "source_passage": "Phone bill reimbursement of up to 500 INR per month is available to employees in sales and client-facing roles only.",
+    "correct_answer": "Phone bill reimbursement of up to 500 INR per month is available only to employees in sales and client-facing roles.",
+    "hallucinated_answer": "Phone bill reimbursement of up to 500 INR per month is available to all employees.",
+    "error_type": "unsupported_addition",
+    "error_explanation": "The policy restricts this to sales/client-facing roles, not all employees."
+  },
+  {
+    "id": "reimb_09",
+    "query": "What approval is needed for reimbursement claims above 5,000 INR?",
+    "source_doc": "hr_policy_reimbursement.txt",
+    "source_passage": "All reimbursement claims above 5,000 INR require approval from both the reporting manager and the finance department.",
+    "correct_answer": "Claims above 5,000 INR require approval from both the reporting manager and the finance department.",
+    "hallucinated_answer": "Claims above 5,000 INR require approval only from the reporting manager.",
+    "error_type": "unsupported_addition",
+    "error_explanation": "Omits the required finance department approval, understating the approval requirement."
+  },
+  {
+    "id": "reimb_10",
+    "query": "What approval is needed for claims below 5,000 INR?",
+    "source_doc": "hr_policy_reimbursement.txt",
+    "source_passage": "Claims below 5,000 INR require only reporting manager approval.",
+    "correct_answer": "Claims below 5,000 INR require only reporting manager approval.",
+    "hallucinated_answer": "Claims below 10,000 INR require only reporting manager approval.",
+    "error_type": "numeric_substitution",
+    "error_explanation": "The 5,000 INR threshold was changed to 10,000 INR."
+  },
+  {
+    "id": "leave_013",
+    "query": "Through which platform must annual leave be requested?",
+    "source_doc": "hr_policy_leave.txt",
+    "source_passage": "Annual leave must be requested at least 3 working days in advance through the HR portal.",
+    "correct_answer": "Annual leave must be requested through the HR portal.",
+    "hallucinated_answer": "Annual leave must be requested via email directly to the reporting manager.",
+    "error_type": "entity_swap",
+    "error_explanation": "Substituted direct email to reporting manager for the required HR portal."
+  },
+  {
+    "id": "leave_014",
+    "query": "At what rate are employees paid for unused annual leave upon resignation?",
+    "source_doc": "hr_policy_leave.txt",
+    "source_passage": "Employees who resign are paid out for unused annual leave at their final gross salary rate.",
+    "correct_answer": "Employees who resign are paid out for unused annual leave at their final gross salary rate.",
+    "hallucinated_answer": "Employees who resign are paid out for unused annual leave at their basic salary rate.",
+    "error_type": "entity_swap",
+    "error_explanation": "Changed final gross salary rate to basic salary rate."
+  },
+  {
+    "id": "leave_015",
+    "query": "What is the deadline for submitting a medical certificate after returning from sick leave?",
+    "source_doc": "hr_policy_leave.txt",
+    "source_passage": "Sick leave exceeding 3 consecutive days requires a medical certificate submitted to HR within 5 working days of returning to work.",
+    "correct_answer": "The medical certificate must be submitted to HR within 5 working days of returning to work.",
+    "hallucinated_answer": "The medical certificate must be submitted to HR within 10 working days of returning to work.",
+    "error_type": "date_change",
+    "error_explanation": "The submission deadline was changed from 5 working days to 10 working days."
+  },
+  {
+    "id": "leave_016",
+    "query": "Do employees receive a payout for unused sick leave when resigning?",
+    "source_doc": "hr_policy_leave.txt",
+    "source_passage": "Sick leave cannot be carried forward and unused sick leave is not paid out upon resignation.",
+    "correct_answer": "No, unused sick leave is not paid out upon resignation.",
+    "hallucinated_answer": "Yes, unused sick leave is paid out upon resignation at the final gross salary rate.",
+    "error_type": "negation",
+    "error_explanation": "Negated the non-payout rule by claiming sick leave is paid out upon resignation."
+  },
+  {
+    "id": "leave_017",
+    "query": "What is the maximum child age eligible for adoption leave?",
+    "source_doc": "hr_policy_leave.txt",
+    "source_passage": "Adoption leave of 12 weeks is available to employees who legally adopt a child under the age of 1.",
+    "correct_answer": "Adoption leave is available to employees who legally adopt a child under the age of 1.",
+    "hallucinated_answer": "Adoption leave is available to employees who legally adopt a child under the age of 3.",
+    "error_type": "numeric_substitution",
+    "error_explanation": "The child age limit was increased from under the age of 1 to under the age of 3."
+  },
+  {
+    "id": "leave_018",
+    "query": "What condition must be met for full leave entitlements to apply after probation?",
+    "source_doc": "hr_policy_leave.txt",
+    "source_passage": "Full leave entitlements apply once probation is successfully completed and confirmed in writing by the reporting manager.",
+    "correct_answer": "Full leave entitlements apply once probation is successfully completed and confirmed in writing by the reporting manager.",
+    "hallucinated_answer": "Full leave entitlements apply automatically after 90 days without requiring written confirmation.",
+    "error_type": "unsupported_addition",
+    "error_explanation": "Omitted the required condition of written confirmation from the reporting manager."
+  },
+  {
+    "id": "leave_019",
+    "query": "How many days does the probation period last according to the leave policy?",
+    "source_doc": "hr_policy_leave.txt",
+    "source_passage": "Employees on probation (first 90 days of employment) are entitled to 5 paid leaves only.",
+    "correct_answer": "The probation period consists of the first 90 days of employment.",
+    "hallucinated_answer": "The probation period consists of the first 180 days of employment.",
+    "error_type": "numeric_substitution",
+    "error_explanation": "The probation duration of 90 days was substituted with 180 days."
+  },
+  {
+    "id": "leave_020",
+    "query": "Are both male and female employees eligible for adoption leave?",
+    "source_doc": "hr_policy_leave.txt",
+    "source_passage": "Adoption leave of 12 weeks is available to employees who legally adopt a child under the age of 1.",
+    "correct_answer": "Yes, adoption leave is available to employees who legally adopt a child under the age of 1 without gender restriction.",
+    "hallucinated_answer": "No, adoption leave of 12 weeks is available only to female employees who legally adopt a child under the age of 1.",
+    "error_type": "unsupported_addition",
+    "error_explanation": "Added an unsupported gender restriction not present in the policy text."
+  },
+  {
+    "id": "leave_021",
+    "query": "What causes an employee to transition to full leave entitlements?",
+    "source_doc": "hr_policy_leave.txt",
+    "source_passage": "Full leave entitlements apply once probation is successfully completed and confirmed in writing by the reporting manager.",
+    "correct_answer": "Full leave entitlements apply because probation is successfully completed and confirmed in writing by the reporting manager.",
+    "hallucinated_answer": "Full leave entitlements apply because the employee reached one full year of continuous tenure.",
+    "error_type": "causal_distortion",
+    "error_explanation": "Distorted the trigger from successful probation confirmation to completing one full year of tenure."
+  },
+  {
+    "id": "leave_022",
+    "query": "How far in advance must maternity leave be requested prior to delivery?",
+    "source_doc": "hr_policy_leave.txt",
+    "source_passage": "Maternity leave must be applied for at least 8 weeks before the expected delivery date.",
+    "correct_answer": "Maternity leave must be applied for at least 8 weeks before the expected delivery date.",
+    "hallucinated_answer": "Maternity leave must be applied for at least 2 weeks before the expected delivery date.",
+    "error_type": "date_change",
+    "error_explanation": "Changed the application deadline from 8 weeks before delivery to 2 weeks before delivery."
+  },
+  {
+    "id": "leave_023",
+    "query": "Can unused annual leave be carried forward indefinitely?",
+    "source_doc": "hr_policy_leave.txt",
+    "source_passage": "Unused annual leave can be carried forward to the next year for a maximum of 1 year.",
+    "correct_answer": "No, unused annual leave can only be carried forward for a maximum of 1 year.",
+    "hallucinated_answer": "Yes, unused annual leave can be accumulated and carried forward indefinitely until resignation.",
+    "error_type": "negation",
+    "error_explanation": "Flipped the 1-year carry forward restriction to permit indefinite accumulation."
+  },
+  {
+    "id": "leave_024",
+    "query": "Who is authorized to confirm the completion of probation in writing?",
+    "source_doc": "hr_policy_leave.txt",
+    "source_passage": "Full leave entitlements apply once probation is successfully completed and confirmed in writing by the reporting manager.",
+    "correct_answer": "Probation completion must be confirmed in writing by the reporting manager.",
+    "hallucinated_answer": "Probation completion must be confirmed in writing by the HR director.",
+    "error_type": "entity_swap",
+    "error_explanation": "Replaced the reporting manager with the HR director as the confirming party."
+  },
+  {
+    "id": "leave_025",
+    "query": "Why does an employee need to submit a medical certificate for 4 days of sick leave?",
+    "source_doc": "hr_policy_leave.txt",
+    "source_passage": "Sick leave exceeding 3 consecutive days requires a medical certificate submitted to HR within 5 working days of returning to work.",
+    "correct_answer": "A certificate is required because the sick leave duration exceeded 3 consecutive days.",
+    "hallucinated_answer": "A certificate is required because the employee is still serving their probationary period.",
+    "error_type": "causal_distortion",
+    "error_explanation": "Attributed the medical certificate requirement to being on probation instead of exceeding 3 consecutive days."
+  },
+  {
+    "id": "leave_026",
+    "query": "How many weeks of leave are provided for legal adoption of a child under age 1?",
+    "source_doc": "hr_policy_leave.txt",
+    "source_passage": "Adoption leave of 12 weeks is available to employees who legally adopt a child under the age of 1.",
+    "correct_answer": "Employees receive 12 weeks of adoption leave.",
+    "hallucinated_answer": "Employees receive 16 weeks of adoption leave.",
+    "error_type": "numeric_substitution",
+    "error_explanation": "Replaced 12 weeks of adoption leave with 16 weeks."
+  },
+  {
+    "id": "leave_027",
+    "query": "How much advance notice is required when requesting annual leave?",
+    "source_doc": "hr_policy_leave.txt",
+    "source_passage": "Annual leave must be requested at least 3 working days in advance through the HR portal.",
+    "correct_answer": "Annual leave must be requested at least 3 working days in advance.",
+    "hallucinated_answer": "Annual leave must be requested at least 10 working days in advance.",
+    "error_type": "date_change",
+    "error_explanation": "Altered the advance notice requirement from 3 working days to 10 working days."
+  },
+  {
+    "id": "wfh_011",
+    "query": "Can an employee on probation be granted an exception to work from home?",
+    "source_doc": "hr_policy_wfh.txt",
+    "source_passage": "Employees still on probation are not eligible for work from home under any circumstances.",
+    "correct_answer": "No, employees on probation are not eligible for work from home under any circumstances.",
+    "hallucinated_answer": "Yes, employees on probation can work from home if granted a special written exception by the department head.",
+    "error_type": "unsupported_addition",
+    "error_explanation": "Added an unsupported exception permitting probation employees to work from home with department head approval."
+  },
+  {
+    "id": "wfh_012",
+    "query": "How long must an employee work continuously before becoming eligible for WFH arrangements?",
+    "source_doc": "hr_policy_wfh.txt",
+    "source_passage": "Employees who have completed 6 months of continuous employment are eligible to apply for work-from-home arrangements.",
+    "correct_answer": "Employees must complete 6 months of continuous employment.",
+    "hallucinated_answer": "Employees must complete 12 months of continuous employment.",
+    "error_type": "date_change",
+    "error_explanation": "Altered the required continuous employment duration from 6 months to 12 months."
+  },
+  {
+    "id": "wfh_013",
+    "query": "Who is responsible for granting initial work-from-home approval?",
+    "source_doc": "hr_policy_wfh.txt",
+    "source_passage": "Approval is granted by the direct reporting manager and must be renewed every 6 months.",
+    "correct_answer": "Approval is granted by the direct reporting manager.",
+    "hallucinated_answer": "Approval is granted by the HR director.",
+    "error_type": "entity_swap",
+    "error_explanation": "Replaced the direct reporting manager with the HR director as the approver."
+  },
+  {
+    "id": "wfh_014",
+    "query": "What hardware device does the company provide to permanent remote employees?",
+    "source_doc": "hr_policy_wfh.txt",
+    "source_passage": "The company provides a laptop and a one-time home office setup allowance of 15,000 INR for employees approved for permanent remote work.",
+    "correct_answer": "The company provides a laptop to permanent remote employees.",
+    "hallucinated_answer": "The company provides an external monitor to permanent remote employees.",
+    "error_type": "entity_swap",
+    "error_explanation": "Substituted an external monitor for the company-provided laptop."
+  },
+  {
+    "id": "wfh_015",
+    "query": "Why is a hybrid employee denied the 15,000 INR home office setup allowance?",
+    "source_doc": "hr_policy_wfh.txt",
+    "source_passage": "This allowance is not provided for employees on the standard 2-day hybrid arrangement.",
+    "correct_answer": "The allowance is denied because the employee is on the standard 2-day hybrid arrangement.",
+    "hallucinated_answer": "The allowance is denied because the employee has not yet completed their 90-day probation period.",
+    "error_type": "causal_distortion",
+    "error_explanation": "Distorted the reason for ineligibility from being on a hybrid arrangement to being on probation."
+  },
+  {
+    "id": "wfh_016",
+    "query": "Does the core hours availability requirement apply exclusively to remote staff?",
+    "source_doc": "hr_policy_wfh.txt",
+    "source_passage": "All employees, whether working from home or office, must be available online between 10:00 AM and 4:00 PM IST, referred to as core hours.",
+    "correct_answer": "No, core hours apply to all employees whether working from home or from the office.",
+    "hallucinated_answer": "Yes, core hours apply exclusively to employees working remotely from home.",
+    "error_type": "negation",
+    "error_explanation": "Flipped the scope of core hours from all employees to remote employees only."
+  },
+  {
+    "id": "wfh_017",
+    "query": "How many days per week are customer-facing employees permitted to work from home?",
+    "source_doc": "hr_policy_wfh.txt",
+    "source_passage": "Employees in customer-facing roles may work from home up to 1 day per week only.",
+    "correct_answer": "Employees in customer-facing roles may work from home up to 1 day per week only.",
+    "hallucinated_answer": "Employees in customer-facing roles may work from home up to 3 days per week only.",
+    "error_type": "numeric_substitution",
+    "error_explanation": "Changed the allowed limit from 1 day per week to 3 days per week."
+  },
+  {
+    "id": "wfh_018",
+    "query": "How much advance notice is required to schedule meetings outside core hours?",
+    "source_doc": "hr_policy_wfh.txt",
+    "source_passage": "Meetings scheduled outside core hours require 24 hours advance notice.",
+    "correct_answer": "Meetings scheduled outside core hours require 24 hours advance notice.",
+    "hallucinated_answer": "Meetings scheduled outside core hours require 12 hours advance notice.",
+    "error_type": "date_change",
+    "error_explanation": "Altered the advance notice requirement from 24 hours to 12 hours."
+  },
+  {
+    "id": "wfh_019",
+    "query": "Which two roles must jointly provide written approval for full-time remote work?",
+    "source_doc": "hr_policy_wfh.txt",
+    "source_passage": "Full-time remote work (5 days per week) requires written approval from the department head and HR director jointly.",
+    "correct_answer": "Full-time remote work requires joint written approval from the department head and the HR director.",
+    "hallucinated_answer": "Full-time remote work requires joint written approval from the direct reporting manager and the finance director.",
+    "error_type": "entity_swap",
+    "error_explanation": "Replaced department head and HR director with reporting manager and finance director."
+  },
+  {
+    "id": "wfh_020",
+    "query": "Why must an employee submit a work-from-home renewal after 6 months?",
+    "source_doc": "hr_policy_wfh.txt",
+    "source_passage": "Approval is granted by the direct reporting manager and must be renewed every 6 months.",
+    "correct_answer": "Renewal is required because WFH approval expires every 6 months under standard company policy.",
+    "hallucinated_answer": "Renewal is required because the employee transitioned from an engineering role to a customer-facing role.",
+    "error_type": "causal_distortion",
+    "error_explanation": "Distorted the cause of renewal from 6-month policy expiration to a role transition."
+  },
+  {
+    "id": "wfh_021",
+    "query": "What time zone applies to the mandatory core working hours?",
+    "source_doc": "hr_policy_wfh.txt",
+    "source_passage": "All employees, whether working from home or office, must be available online between 10:00 AM and 4:00 PM IST, referred to as core hours.",
+    "correct_answer": "The core hours are measured in Indian Standard Time (IST).",
+    "hallucinated_answer": "The core hours are measured in Coordinated Universal Time (UTC).",
+    "error_type": "entity_swap",
+    "error_explanation": "Substituted UTC for IST as the time zone governing core hours."
+  },
+  {
+    "id": "wfh_022",
+    "query": "How many days per week of remote work defines full-time remote status?",
+    "source_doc": "hr_policy_wfh.txt",
+    "source_passage": "Full-time remote work (5 days per week) requires written approval from the department head and HR director jointly.",
+    "correct_answer": "Full-time remote work is defined as 5 days per week.",
+    "hallucinated_answer": "Full-time remote work is defined as 4 days per week.",
+    "error_type": "numeric_substitution",
+    "error_explanation": "Substituted 5 days per week with 4 days per week."
+  },
+  {
+    "id": "wfh_023",
+    "query": "Can internal meetings be scheduled outside core hours without advance notice?",
+    "source_doc": "hr_policy_wfh.txt",
+    "source_passage": "Meetings scheduled outside core hours require 24 hours advance notice.",
+    "correct_answer": "No, meetings scheduled outside core hours require 24 hours advance notice.",
+    "hallucinated_answer": "Yes, internal meetings outside core hours can be scheduled immediately without any prior notice.",
+    "error_type": "negation",
+    "error_explanation": "Negated the requirement of 24 hours advance notice for scheduling outside core hours."
+  },
+  {
+    "id": "wfh_024",
+    "query": "What requirements must an employee satisfy to work from home 2 days per week?",
+    "source_doc": "hr_policy_wfh.txt",
+    "source_passage": "Eligible employees may work from home up to 2 days per week.",
+    "correct_answer": "The employee must be eligible under the policy, having completed 6 months continuous employment and obtained manager approval.",
+    "hallucinated_answer": "The employee must be eligible under the policy and submit daily activity logs to human resources.",
+    "error_type": "unsupported_addition",
+    "error_explanation": "Added an unsupported condition requiring daily activity logs submitted to HR."
+  },
+  {
+    "id": "wfh_025",
+    "query": "What is the expiration interval for an approved work-from-home arrangement?",
+    "source_doc": "hr_policy_wfh.txt",
+    "source_passage": "Approval is granted by the direct reporting manager and must be renewed every 6 months.",
+    "correct_answer": "The approval must be renewed every 6 months.",
+    "hallucinated_answer": "The approval must be renewed every 3 months.",
+    "error_type": "date_change",
+    "error_explanation": "Altered the renewal deadline interval from every 6 months to every 3 months."
+  },
+  {
+    "id": "reimb_011",
+    "query": "What air travel cabin class is eligible for reimbursement on official business?",
+    "source_doc": "hr_policy_reimbursement.txt",
+    "source_passage": "Employees traveling for official business are reimbursed for economy class airfare, train fare, and pre-approved local transport.",
+    "correct_answer": "Employees traveling for official business are reimbursed for economy class airfare.",
+    "hallucinated_answer": "Employees traveling for official business are reimbursed for business class airfare.",
+    "error_type": "entity_swap",
+    "error_explanation": "Replaced economy class airfare with business class airfare."
+  },
+  {
+    "id": "reimb_012",
+    "query": "What condition must local transportation meet to be reimbursed?",
+    "source_doc": "hr_policy_reimbursement.txt",
+    "source_passage": "Employees traveling for official business are reimbursed for economy class airfare, train fare, and pre-approved local transport.",
+    "correct_answer": "Local transport must be pre-approved to be reimbursed.",
+    "hallucinated_answer": "Any local transport is reimbursed without requiring pre-approval.",
+    "error_type": "unsupported_addition",
+    "error_explanation": "Omitted the required pre-approval condition for local transport reimbursement."
+  },
+  {
+    "id": "reimb_013",
+    "query": "Who has the authority to approve an expense claim submitted after the 30-day deadline?",
+    "source_doc": "hr_policy_reimbursement.txt",
+    "source_passage": "Claims submitted after 30 days will not be processed except with written approval from the finance director.",
+    "correct_answer": "A late claim requires written approval from the finance director.",
+    "hallucinated_answer": "A late claim requires written approval from the department head.",
+    "error_type": "entity_swap",
+    "error_explanation": "Replaced the finance director with the department head as the approver for late claims."
+  },
+  {
+    "id": "reimb_014",
+    "query": "Why was a travel reimbursement claim submitted after 35 days refused processing?",
+    "source_doc": "hr_policy_reimbursement.txt",
+    "source_passage": "Claims submitted after 30 days will not be processed except with written approval from the finance director.",
+    "correct_answer": "It was refused processing because it was submitted past the 30-day deadline without written approval from the finance director.",
+    "hallucinated_answer": "It was refused processing because the expense exceeded the 5,000 INR limit for single-manager approval.",
+    "error_type": "causal_distortion",
+    "error_explanation": "Distorted the reason for rejection from exceeding the 30-day limit to exceeding the 5,000 INR approval threshold."
+  },
+  {
+    "id": "reimb_015",
+    "query": "Is alcohol eligible for reimbursement during official business trips?",
+    "source_doc": "hr_policy_reimbursement.txt",
+    "source_passage": "Alcohol is not reimbursable under any circumstances.",
+    "correct_answer": "No, alcohol is not reimbursable under any circumstances.",
+    "hallucinated_answer": "Yes, alcohol is reimbursable if consumed during business entertaining with clients.",
+    "error_type": "negation",
+    "error_explanation": "Negated the absolute prohibition against alcohol reimbursement."
+  },
+  {
+    "id": "reimb_016",
+    "query": "What is the maximum monthly phone reimbursement cap for eligible roles?",
+    "source_doc": "hr_policy_reimbursement.txt",
+    "source_passage": "Phone bill reimbursement of up to 500 INR per month is available to employees in sales and client-facing roles only.",
+    "correct_answer": "Eligible employees can receive up to 500 INR per month for phone bill reimbursement.",
+    "hallucinated_answer": "Eligible employees can receive up to 1,500 INR per month for phone bill reimbursement.",
+    "error_type": "numeric_substitution",
+    "error_explanation": "Changed the monthly phone reimbursement cap from 500 INR to 1,500 INR."
+  },
+  {
+    "id": "reimb_017",
+    "query": "What is the standard submission timeframe for reimbursement claims?",
+    "source_doc": "hr_policy_reimbursement.txt",
+    "source_passage": "Reimbursement claims must be submitted within 30 days of the expense being incurred.",
+    "correct_answer": "Reimbursement claims must be submitted within 30 days of the expense being incurred.",
+    "hallucinated_answer": "Reimbursement claims must be submitted within 14 days of the expense being incurred.",
+    "error_type": "date_change",
+    "error_explanation": "Shortened the claim submission deadline from 30 days to 14 days."
+  },
+  {
+    "id": "reimb_018",
+    "query": "Why does a 6,000 INR expense claim need approval from the finance department?",
+    "source_doc": "hr_policy_reimbursement.txt",
+    "source_passage": "All reimbursement claims above 5,000 INR require approval from both the reporting manager and the finance department.",
+    "correct_answer": "It requires finance department approval because all claims exceeding 5,000 INR require approval from both the manager and the finance department.",
+    "hallucinated_answer": "It requires finance department approval because the expense was incurred on an international business trip.",
+    "error_type": "causal_distortion",
+    "error_explanation": "Distorted the trigger for dual approval from exceeding 5,000 INR to international business travel."
+  },
+  {
+    "id": "reimb_019",
+    "query": "Can software engineers working remotely claim monthly phone bill reimbursement?",
+    "source_doc": "hr_policy_reimbursement.txt",
+    "source_passage": "Phone bill reimbursement of up to 500 INR per month is available to employees in sales and client-facing roles only.",
+    "correct_answer": "No, phone bill reimbursement is restricted to employees in sales and client-facing roles only.",
+    "hallucinated_answer": "Yes, phone bill reimbursement of up to 500 INR per month is available to all remote employees regardless of role.",
+    "error_type": "unsupported_addition",
+    "error_explanation": "Omitted the required condition restricting eligibility solely to sales and client-facing roles."
+  },
+  {
+    "id": "reimb_020",
+    "query": "In what currency is the meal allowance allocated for international travel?",
+    "source_doc": "hr_policy_reimbursement.txt",
+    "source_passage": "Employees on official travel receive a daily meal allowance of 1,200 INR within India and 40 USD for international travel.",
+    "correct_answer": "The international travel meal allowance is designated in USD.",
+    "hallucinated_answer": "The international travel meal allowance is designated in EUR.",
+    "error_type": "entity_swap",
+    "error_explanation": "Substituted EUR for USD as the currency for international travel meal allowance."
+  },
+  {
+    "id": "reimb_021",
+    "query": "Can hybrid employees receive the monthly 1,000 INR internet reimbursement?",
+    "source_doc": "hr_policy_reimbursement.txt",
+    "source_passage": "This reimbursement is not available to employees on the standard hybrid work arrangement.",
+    "correct_answer": "No, this reimbursement is not available to employees on the standard hybrid work arrangement.",
+    "hallucinated_answer": "Yes, employees on the standard hybrid work arrangement can receive the 1,000 INR internet reimbursement.",
+    "error_type": "negation",
+    "error_explanation": "Negated the explicit exclusion of hybrid employees from internet reimbursement."
+  },
+  {
+    "id": "reimb_022",
+    "query": "What is the daily meal allowance rate for official travel within India?",
+    "source_doc": "hr_policy_reimbursement.txt",
+    "source_passage": "Employees on official travel receive a daily meal allowance of 1,200 INR within India and 40 USD for international travel.",
+    "correct_answer": "The daily meal allowance within India is 1,200 INR.",
+    "hallucinated_answer": "The daily meal allowance within India is 1,800 INR.",
+    "error_type": "numeric_substitution",
+    "error_explanation": "Substituted 1,200 INR with 1,800 INR for the domestic daily meal allowance."
+  },
+  {
+    "id": "reimb_023",
+    "query": "What is the maximum elapsed time after incurring an expense before claims require finance director sign-off?",
+    "source_doc": "hr_policy_reimbursement.txt",
+    "source_passage": "Claims submitted after 30 days will not be processed except with written approval from the finance director.",
+    "correct_answer": "Claims must be submitted within 30 days to be processed without finance director approval.",
+    "hallucinated_answer": "Claims must be submitted within 60 days to be processed without finance director approval.",
+    "error_type": "date_change",
+    "error_explanation": "Altered the deadline before requiring finance director approval from 30 days to 60 days."
+  },
+  {
+    "id": "reimb_024",
+    "query": "Whose approval is required for a reimbursement claim of 2,500 INR?",
+    "source_doc": "hr_policy_reimbursement.txt",
+    "source_passage": "Claims below 5,000 INR require only reporting manager approval.",
+    "correct_answer": "Claims below 5,000 INR require only reporting manager approval.",
+    "hallucinated_answer": "Claims of 2,500 INR require approval from both the reporting manager and the finance department.",
+    "error_type": "unsupported_addition",
+    "error_explanation": "Added an unsupported requirement of finance department approval for a claim below 5,000 INR."
+  },
+  {
+    "id": "reimb_025",
+    "query": "What categories of transportation are reimbursable for official business travel?",
+    "source_doc": "hr_policy_reimbursement.txt",
+    "source_passage": "Employees traveling for official business are reimbursed for economy class airfare, train fare, and pre-approved local transport.",
+    "correct_answer": "Employees are reimbursed for economy class airfare, train fare, and pre-approved local transport.",
+    "hallucinated_answer": "Employees are reimbursed for luxury rental cars, train fare, and premium airline cabins.",
+    "error_type": "entity_swap",
+    "error_explanation": "Replaced economy airfare and pre-approved local transport with luxury rental cars and premium airline cabins."
+  }
+]

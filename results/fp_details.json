@@ -1,0 +1,584 @@
+[
+  {
+    "id": "leave_11",
+    "error_type": "numeric_substitution",
+    "query": "How many weeks of adoption leave are available?",
+    "source_doc": "hr_policy_leave.txt",
+    "source_passage": "Adoption leave of 12 weeks is available to employees who legally adopt a child under the age of 1.",
+    "correct_answer": "Adoption leave of 12 weeks is available to employees who adopt a child under the age of 1.",
+    "correct_verification": {
+      "query": "How many weeks of adoption leave are available?",
+      "answer": "Adoption leave of 12 weeks is available to employees who adopt a child under the age of 1.",
+      "trust_score": 0.0,
+      "status": "Hallucinated",
+      "claims": [
+        {
+          "claim": "Adoption leave of 12 weeks is available to employees who adopt a child under the age of 1",
+          "consensus": -1.0,
+          "evidence": [
+            {
+              "doc": "hr_policy_leave.txt",
+              "text": "Adoption leave of 12 weeks is available to employees who legally adopt a child under the age of 1.",
+              "similarity": 0.98,
+              "label": "CONTRADICTION",
+              "reason": "Claim contains number(s) ['1'] not present in evidence (evidence contains ['1.', '12']); likely numeric substitution."
+            }
+          ]
+        }
+      ],
+      "explanation": "Claim \"Adoption leave of 12 weeks is available to employees who adopt a child under the age of 1\" contradicts evidence from hr_policy_leave.txt: Claim contains number(s) ['1'] not present in evidence (evidence contains ['1.', '12']); likely numeric substitution."
+    },
+    "hallucinated_answer": "Adoption leave of 12 weeks is available to employees who adopt a child under the age of 5.",
+    "hallucinated_verification": {
+      "query": "How many weeks of adoption leave are available?",
+      "answer": "Adoption leave of 12 weeks is available to employees who adopt a child under the age of 5.",
+      "trust_score": 0.0,
+      "status": "Hallucinated",
+      "claims": [
+        {
+          "claim": "Adoption leave of 12 weeks is available to employees who adopt a child under the age of 5",
+          "consensus": -1.0,
+          "evidence": [
+            {
+              "doc": "hr_policy_leave.txt",
+              "text": "Adoption leave of 12 weeks is available to employees who legally adopt a child under the age of 1.",
+              "similarity": 0.95,
+              "label": "CONTRADICTION",
+              "reason": "Claim contains number(s) ['5'] not present in evidence (evidence contains ['1.', '12']); likely numeric substitution."
+            }
+          ]
+        }
+      ],
+      "explanation": "Claim \"Adoption leave of 12 weeks is available to employees who adopt a child under the age of 5\" contradicts evidence from hr_policy_leave.txt: Claim contains number(s) ['5'] not present in evidence (evidence contains ['1.', '12']); likely numeric substitution."
+    }
+  },
+  {
+    "id": "leave_017",
+    "error_type": "numeric_substitution",
+    "query": "What is the maximum child age eligible for adoption leave?",
+    "source_doc": "hr_policy_leave.txt",
+    "source_passage": "Adoption leave of 12 weeks is available to employees who legally adopt a child under the age of 1.",
+    "correct_answer": "Adoption leave is available to employees who legally adopt a child under the age of 1.",
+    "correct_verification": {
+      "query": "What is the maximum child age eligible for adoption leave?",
+      "answer": "Adoption leave is available to employees who legally adopt a child under the age of 1.",
+      "trust_score": 0.0,
+      "status": "Hallucinated",
+      "claims": [
+        {
+          "claim": "Adoption leave is available to employees who legally adopt a child under the age of 1",
+          "consensus": -1.0,
+          "evidence": [
+            {
+              "doc": "hr_policy_leave.txt",
+              "text": "Adoption leave of 12 weeks is available to employees who legally adopt a child under the age of 1.",
+              "similarity": 0.912,
+              "label": "CONTRADICTION",
+              "reason": "Claim contains number(s) ['1'] not present in evidence (evidence contains ['1.', '12']); likely numeric substitution."
+            }
+          ]
+        }
+      ],
+      "explanation": "Claim \"Adoption leave is available to employees who legally adopt a child under the age of 1\" contradicts evidence from hr_policy_leave.txt: Claim contains number(s) ['1'] not present in evidence (evidence contains ['1.', '12']); likely numeric substitution."
+    },
+    "hallucinated_answer": "Adoption leave is available to employees who legally adopt a child under the age of 3.",
+    "hallucinated_verification": {
+      "query": "What is the maximum child age eligible for adoption leave?",
+      "answer": "Adoption leave is available to employees who legally adopt a child under the age of 3.",
+      "trust_score": 0.0,
+      "status": "Hallucinated",
+      "claims": [
+        {
+          "claim": "Adoption leave is available to employees who legally adopt a child under the age of 3",
+          "consensus": -1.0,
+          "evidence": [
+            {
+              "doc": "hr_policy_leave.txt",
+              "text": "Adoption leave of 12 weeks is available to employees who legally adopt a child under the age of 1.",
+              "similarity": 0.907,
+              "label": "CONTRADICTION",
+              "reason": "Claim contains number(s) ['3'] not present in evidence (evidence contains ['1.', '12']); likely numeric substitution."
+            }
+          ]
+        }
+      ],
+      "explanation": "Claim \"Adoption leave is available to employees who legally adopt a child under the age of 3\" contradicts evidence from hr_policy_leave.txt: Claim contains number(s) ['3'] not present in evidence (evidence contains ['1.', '12']); likely numeric substitution."
+    }
+  },
+  {
+    "id": "leave_020",
+    "error_type": "unsupported_addition",
+    "query": "Are both male and female employees eligible for adoption leave?",
+    "source_doc": "hr_policy_leave.txt",
+    "source_passage": "Adoption leave of 12 weeks is available to employees who legally adopt a child under the age of 1.",
+    "correct_answer": "Yes, adoption leave is available to employees who legally adopt a child under the age of 1 without gender restriction.",
+    "correct_verification": {
+      "query": "Are both male and female employees eligible for adoption leave?",
+      "answer": "Yes, adoption leave is available to employees who legally adopt a child under the age of 1 without gender restriction.",
+      "trust_score": 0.0,
+      "status": "Hallucinated",
+      "claims": [
+        {
+          "claim": "Yes, adoption leave is available to employees who legally adopt a child under the age of 1 without gender restriction",
+          "consensus": -1.0,
+          "evidence": [
+            {
+              "doc": "hr_policy_leave.txt",
+              "text": "Adoption leave of 12 weeks is available to employees who legally adopt a child under the age of 1.",
+              "similarity": 0.778,
+              "label": "CONTRADICTION",
+              "reason": "Claim contains number(s) ['1'] not present in evidence (evidence contains ['1.', '12']); likely numeric substitution."
+            }
+          ]
+        }
+      ],
+      "explanation": "Claim \"Yes, adoption leave is available to employees who legally adopt a child under the age of 1 without gender restriction\" contradicts evidence from hr_policy_leave.txt: Claim contains number(s) ['1'] not present in evidence (evidence contains ['1.', '12']); likely numeric substitution."
+    },
+    "hallucinated_answer": "No, adoption leave of 12 weeks is available only to female employees who legally adopt a child under the age of 1.",
+    "hallucinated_verification": {
+      "query": "Are both male and female employees eligible for adoption leave?",
+      "answer": "No, adoption leave of 12 weeks is available only to female employees who legally adopt a child under the age of 1.",
+      "trust_score": 0.0,
+      "status": "Hallucinated",
+      "claims": [
+        {
+          "claim": "No, adoption leave of 12 weeks is available only to female employees who legally adopt a child under the age of 1",
+          "consensus": -1.0,
+          "evidence": [
+            {
+              "doc": "hr_policy_leave.txt",
+              "text": "Adoption leave of 12 weeks is available to employees who legally adopt a child under the age of 1.",
+              "similarity": 0.891,
+              "label": "CONTRADICTION",
+              "reason": "Claim contains number(s) ['1'] not present in evidence (evidence contains ['1.', '12']); likely numeric substitution."
+            }
+          ]
+        }
+      ],
+      "explanation": "Claim \"No, adoption leave of 12 weeks is available only to female employees who legally adopt a child under the age of 1\" contradicts evidence from hr_policy_leave.txt: Claim contains number(s) ['1'] not present in evidence (evidence contains ['1.', '12']); likely numeric substitution."
+    }
+  },
+  {
+    "id": "leave_023",
+    "error_type": "negation",
+    "query": "Can unused annual leave be carried forward indefinitely?",
+    "source_doc": "hr_policy_leave.txt",
+    "source_passage": "Unused annual leave can be carried forward to the next year for a maximum of 1 year.",
+    "correct_answer": "No, unused annual leave can only be carried forward for a maximum of 1 year.",
+    "correct_verification": {
+      "query": "Can unused annual leave be carried forward indefinitely?",
+      "answer": "No, unused annual leave can only be carried forward for a maximum of 1 year.",
+      "trust_score": 0.0,
+      "status": "Hallucinated",
+      "claims": [
+        {
+          "claim": "No, unused annual leave can only be carried forward for a maximum of 1 year",
+          "consensus": -1.0,
+          "evidence": [
+            {
+              "doc": "hr_policy_leave.txt",
+              "text": "Unused annual leave can be carried forward to the next year for a maximum of 1 year.",
+              "similarity": 0.908,
+              "label": "CONTRADICTION",
+              "reason": "Negation polarity mismatch: claim negation=True, evidence negation=False."
+            }
+          ]
+        }
+      ],
+      "explanation": "Claim \"No, unused annual leave can only be carried forward for a maximum of 1 year\" contradicts evidence from hr_policy_leave.txt: Negation polarity mismatch: claim negation=True, evidence negation=False."
+    },
+    "hallucinated_answer": "Yes, unused annual leave can be accumulated and carried forward indefinitely until resignation.",
+    "hallucinated_verification": {
+      "query": "Can unused annual leave be carried forward indefinitely?",
+      "answer": "Yes, unused annual leave can be accumulated and carried forward indefinitely until resignation.",
+      "trust_score": 0.0,
+      "status": "Hallucinated",
+      "claims": [
+        {
+          "claim": "Yes, unused annual leave can be accumulated",
+          "consensus": 1.0,
+          "evidence": [
+            {
+              "doc": "hr_policy_leave.txt",
+              "text": "Unused annual leave can be carried forward to the next year for a maximum of 1 year.",
+              "similarity": 0.797,
+              "label": "ENTAILMENT",
+              "reason": "NLI model confirmed entailment from evidence (confidence: 0.916)."
+            }
+          ]
+        },
+        {
+          "claim": "carried forward indefinitely until resignation",
+          "consensus": -1.0,
+          "evidence": [
+            {
+              "doc": "hr_policy_leave.txt",
+              "text": "Unused annual leave can be carried forward to the next year for a maximum of 1 year.",
+              "similarity": 0.557,
+              "label": "CONTRADICTION",
+              "reason": "NLI model detected contradiction with evidence (confidence: 0.943)."
+            }
+          ]
+        }
+      ],
+      "explanation": "Claim \"carried forward indefinitely until resignation\" contradicts evidence from hr_policy_leave.txt: NLI model detected contradiction with evidence (confidence: 0.943)."
+    }
+  },
+  {
+    "id": "wfh_015",
+    "error_type": "causal_distortion",
+    "query": "Why is a hybrid employee denied the 15,000 INR home office setup allowance?",
+    "source_doc": "hr_policy_wfh.txt",
+    "source_passage": "This allowance is not provided for employees on the standard 2-day hybrid arrangement.",
+    "correct_answer": "The allowance is denied because the employee is on the standard 2-day hybrid arrangement.",
+    "correct_verification": {
+      "query": "Why is a hybrid employee denied the 15,000 INR home office setup allowance?",
+      "answer": "The allowance is denied because the employee is on the standard 2-day hybrid arrangement.",
+      "trust_score": 0.0,
+      "status": "Hallucinated",
+      "claims": [
+        {
+          "claim": "The allowance is denied because the employee is on the standard 2-day hybrid arrangement",
+          "consensus": -1.0,
+          "evidence": [
+            {
+              "doc": "hr_policy_wfh.txt",
+              "text": "This allowance is not provided for employees on the standard 2-day hybrid arrangement.",
+              "similarity": 0.85,
+              "label": "CONTRADICTION",
+              "reason": "Negation polarity mismatch: claim negation=False, evidence negation=True."
+            }
+          ]
+        }
+      ],
+      "explanation": "Claim \"The allowance is denied because the employee is on the standard 2-day hybrid arrangement\" contradicts evidence from hr_policy_wfh.txt: Negation polarity mismatch: claim negation=False, evidence negation=True."
+    },
+    "hallucinated_answer": "The allowance is denied because the employee has not yet completed their 90-day probation period.",
+    "hallucinated_verification": {
+      "query": "Why is a hybrid employee denied the 15,000 INR home office setup allowance?",
+      "answer": "The allowance is denied because the employee has not yet completed their 90-day probation period.",
+      "trust_score": 0.0,
+      "status": "Hallucinated",
+      "claims": [
+        {
+          "claim": "The allowance is denied because the employee has not yet completed their 90-day probation period",
+          "consensus": -1.0,
+          "evidence": [
+            {
+              "doc": "hr_policy_wfh.txt",
+              "text": "This allowance is not provided for employees on the standard 2-day hybrid arrangement.",
+              "similarity": 0.533,
+              "label": "CONTRADICTION",
+              "reason": "Claim contains number(s) ['90'] not present in evidence (evidence contains ['2']); likely numeric substitution."
+            }
+          ]
+        }
+      ],
+      "explanation": "Claim \"The allowance is denied because the employee has not yet completed their 90-day probation period\" contradicts evidence from hr_policy_wfh.txt: Claim contains number(s) ['90'] not present in evidence (evidence contains ['2']); likely numeric substitution."
+    }
+  },
+  {
+    "id": "wfh_016",
+    "error_type": "negation",
+    "query": "Does the core hours availability requirement apply exclusively to remote staff?",
+    "source_doc": "hr_policy_wfh.txt",
+    "source_passage": "All employees, whether working from home or office, must be available online between 10:00 AM and 4:00 PM IST, referred to as core hours.",
+    "correct_answer": "No, core hours apply to all employees whether working from home or from the office.",
+    "correct_verification": {
+      "query": "Does the core hours availability requirement apply exclusively to remote staff?",
+      "answer": "No, core hours apply to all employees whether working from home or from the office.",
+      "trust_score": 0.0,
+      "status": "Hallucinated",
+      "claims": [
+        {
+          "claim": "No, core hours apply to all employees whether working from home or from the office",
+          "consensus": -1.0,
+          "evidence": [
+            {
+              "doc": "hr_policy_wfh.txt",
+              "text": "All employees, whether working from home or office, must be available online between 10:00 AM and 4:00 PM IST, referred to as core hours.",
+              "similarity": 0.77,
+              "label": "CONTRADICTION",
+              "reason": "Negation polarity mismatch: claim negation=True, evidence negation=False."
+            }
+          ]
+        }
+      ],
+      "explanation": "Claim \"No, core hours apply to all employees whether working from home or from the office\" contradicts evidence from hr_policy_wfh.txt: Negation polarity mismatch: claim negation=True, evidence negation=False."
+    },
+    "hallucinated_answer": "Yes, core hours apply exclusively to employees working remotely from home.",
+    "hallucinated_verification": {
+      "query": "Does the core hours availability requirement apply exclusively to remote staff?",
+      "answer": "Yes, core hours apply exclusively to employees working remotely from home.",
+      "trust_score": 0.0,
+      "status": "Hallucinated",
+      "claims": [
+        {
+          "claim": "Yes, core hours apply exclusively to employees working remotely from home",
+          "consensus": -1.0,
+          "evidence": [
+            {
+              "doc": "hr_policy_wfh.txt",
+              "text": "All employees, whether working from home or office, must be available online between 10:00 AM and 4:00 PM IST, referred to as core hours.",
+              "similarity": 0.725,
+              "label": "CONTRADICTION",
+              "reason": "NLI model detected contradiction with evidence (confidence: 0.844)."
+            }
+          ]
+        }
+      ],
+      "explanation": "Claim \"Yes, core hours apply exclusively to employees working remotely from home\" contradicts evidence from hr_policy_wfh.txt: NLI model detected contradiction with evidence (confidence: 0.844)."
+    }
+  },
+  {
+    "id": "wfh_023",
+    "error_type": "negation",
+    "query": "Can internal meetings be scheduled outside core hours without advance notice?",
+    "source_doc": "hr_policy_wfh.txt",
+    "source_passage": "Meetings scheduled outside core hours require 24 hours advance notice.",
+    "correct_answer": "No, meetings scheduled outside core hours require 24 hours advance notice.",
+    "correct_verification": {
+      "query": "Can internal meetings be scheduled outside core hours without advance notice?",
+      "answer": "No, meetings scheduled outside core hours require 24 hours advance notice.",
+      "trust_score": 0.0,
+      "status": "Hallucinated",
+      "claims": [
+        {
+          "claim": "No, meetings scheduled outside core hours require 24 hours advance notice",
+          "consensus": -1.0,
+          "evidence": [
+            {
+              "doc": "hr_policy_wfh.txt",
+              "text": "Meetings scheduled outside core hours require 24 hours advance notice.",
+              "similarity": 0.939,
+              "label": "CONTRADICTION",
+              "reason": "Negation polarity mismatch: claim negation=True, evidence negation=False."
+            }
+          ]
+        }
+      ],
+      "explanation": "Claim \"No, meetings scheduled outside core hours require 24 hours advance notice\" contradicts evidence from hr_policy_wfh.txt: Negation polarity mismatch: claim negation=True, evidence negation=False."
+    },
+    "hallucinated_answer": "Yes, internal meetings outside core hours can be scheduled immediately without any prior notice.",
+    "hallucinated_verification": {
+      "query": "Can internal meetings be scheduled outside core hours without advance notice?",
+      "answer": "Yes, internal meetings outside core hours can be scheduled immediately without any prior notice.",
+      "trust_score": 0.0,
+      "status": "Hallucinated",
+      "claims": [
+        {
+          "claim": "Yes, internal meetings outside core hours can be scheduled immediately without any prior notice",
+          "consensus": -1.0,
+          "evidence": [
+            {
+              "doc": "hr_policy_wfh.txt",
+              "text": "Meetings scheduled outside core hours require 24 hours advance notice.",
+              "similarity": 0.786,
+              "label": "CONTRADICTION",
+              "reason": "Negation polarity mismatch: claim negation=True, evidence negation=False."
+            }
+          ]
+        }
+      ],
+      "explanation": "Claim \"Yes, internal meetings outside core hours can be scheduled immediately without any prior notice\" contradicts evidence from hr_policy_wfh.txt: Negation polarity mismatch: claim negation=True, evidence negation=False."
+    }
+  },
+  {
+    "id": "wfh_024",
+    "error_type": "unsupported_addition",
+    "query": "What requirements must an employee satisfy to work from home 2 days per week?",
+    "source_doc": "hr_policy_wfh.txt",
+    "source_passage": "Eligible employees may work from home up to 2 days per week.",
+    "correct_answer": "The employee must be eligible under the policy, having completed 6 months continuous employment and obtained manager approval.",
+    "correct_verification": {
+      "query": "What requirements must an employee satisfy to work from home 2 days per week?",
+      "answer": "The employee must be eligible under the policy, having completed 6 months continuous employment and obtained manager approval.",
+      "trust_score": 0.0,
+      "status": "Hallucinated",
+      "claims": [
+        {
+          "claim": "The employee must be eligible under the policy, having completed 6 months continuous employment",
+          "consensus": -1.0,
+          "evidence": [
+            {
+              "doc": "hr_policy_wfh.txt",
+              "text": "Eligible employees may work from home up to 2 days per week.",
+              "similarity": 0.421,
+              "label": "CONTRADICTION",
+              "reason": "Claim contains number(s) ['6'] not present in evidence (evidence contains ['2']); likely numeric substitution."
+            }
+          ]
+        },
+        {
+          "claim": "obtained manager approval",
+          "consensus": 0.0,
+          "evidence": [
+            {
+              "doc": "hr_policy_wfh.txt",
+              "text": "Eligible employees may work from home up to 2 days per week.",
+              "similarity": 0.0,
+              "label": "NEUTRAL",
+              "reason": "Evidence neither entails nor directly contradicts claim (confidence: 0.893)."
+            }
+          ]
+        }
+      ],
+      "explanation": "Claim \"The employee must be eligible under the policy, having completed 6 months continuous employment\" contradicts evidence from hr_policy_wfh.txt: Claim contains number(s) ['6'] not present in evidence (evidence contains ['2']); likely numeric substitution."
+    },
+    "hallucinated_answer": "The employee must be eligible under the policy and submit daily activity logs to human resources.",
+    "hallucinated_verification": {
+      "query": "What requirements must an employee satisfy to work from home 2 days per week?",
+      "answer": "The employee must be eligible under the policy and submit daily activity logs to human resources.",
+      "trust_score": 50.0,
+      "status": "Uncertain",
+      "claims": [
+        {
+          "claim": "The employee must be eligible under the policy",
+          "consensus": 0.0,
+          "evidence": [
+            {
+              "doc": "hr_policy_wfh.txt",
+              "text": "Eligible employees may work from home up to 2 days per week.",
+              "similarity": 0.372,
+              "label": "NEUTRAL",
+              "reason": "Evidence neither entails nor directly contradicts claim (confidence: 0.937)."
+            }
+          ]
+        },
+        {
+          "claim": "submit daily activity logs to human resources",
+          "consensus": 0.0,
+          "evidence": [
+            {
+              "doc": "hr_policy_wfh.txt",
+              "text": "Eligible employees may work from home up to 2 days per week.",
+              "similarity": 0.233,
+              "label": "NEUTRAL",
+              "reason": "Evidence neither entails nor directly contradicts claim (confidence: 0.97)."
+            }
+          ]
+        }
+      ],
+      "explanation": "Claim \"The employee must be eligible under the policy\" is not strongly supported by any retrieved evidence (low consensus score: 0.0)."
+    }
+  },
+  {
+    "id": "reimb_013",
+    "error_type": "entity_swap",
+    "query": "Who has the authority to approve an expense claim submitted after the 30-day deadline?",
+    "source_doc": "hr_policy_reimbursement.txt",
+    "source_passage": "Claims submitted after 30 days will not be processed except with written approval from the finance director.",
+    "correct_answer": "A late claim requires written approval from the finance director.",
+    "correct_verification": {
+      "query": "Who has the authority to approve an expense claim submitted after the 30-day deadline?",
+      "answer": "A late claim requires written approval from the finance director.",
+      "trust_score": 0.0,
+      "status": "Hallucinated",
+      "claims": [
+        {
+          "claim": "A late claim requires written approval from the finance director",
+          "consensus": -1.0,
+          "evidence": [
+            {
+              "doc": "hr_policy_reimbursement.txt",
+              "text": "Claims submitted after 30 days will not be processed except with written approval from the finance director.",
+              "similarity": 0.704,
+              "label": "CONTRADICTION",
+              "reason": "Negation polarity mismatch: claim negation=False, evidence negation=True."
+            }
+          ]
+        }
+      ],
+      "explanation": "Claim \"A late claim requires written approval from the finance director\" contradicts evidence from hr_policy_reimbursement.txt: Negation polarity mismatch: claim negation=False, evidence negation=True."
+    },
+    "hallucinated_answer": "A late claim requires written approval from the department head.",
+    "hallucinated_verification": {
+      "query": "Who has the authority to approve an expense claim submitted after the 30-day deadline?",
+      "answer": "A late claim requires written approval from the department head.",
+      "trust_score": 0.0,
+      "status": "Hallucinated",
+      "claims": [
+        {
+          "claim": "A late claim requires written approval from the department head",
+          "consensus": -1.0,
+          "evidence": [
+            {
+              "doc": "hr_policy_reimbursement.txt",
+              "text": "Claims submitted after 30 days will not be processed except with written approval from the finance director.",
+              "similarity": 0.605,
+              "label": "CONTRADICTION",
+              "reason": "Negation polarity mismatch: claim negation=False, evidence negation=True."
+            }
+          ]
+        }
+      ],
+      "explanation": "Claim \"A late claim requires written approval from the department head\" contradicts evidence from hr_policy_reimbursement.txt: Negation polarity mismatch: claim negation=False, evidence negation=True."
+    }
+  },
+  {
+    "id": "reimb_019",
+    "error_type": "unsupported_addition",
+    "query": "Can software engineers working remotely claim monthly phone bill reimbursement?",
+    "source_doc": "hr_policy_reimbursement.txt",
+    "source_passage": "Phone bill reimbursement of up to 500 INR per month is available to employees in sales and client-facing roles only.",
+    "correct_answer": "No, phone bill reimbursement is restricted to employees in sales and client-facing roles only.",
+    "correct_verification": {
+      "query": "Can software engineers working remotely claim monthly phone bill reimbursement?",
+      "answer": "No, phone bill reimbursement is restricted to employees in sales and client-facing roles only.",
+      "trust_score": 0.0,
+      "status": "Hallucinated",
+      "claims": [
+        {
+          "claim": "No, phone bill reimbursement is restricted to employees in sales",
+          "consensus": -1.0,
+          "evidence": [
+            {
+              "doc": "hr_policy_reimbursement.txt",
+              "text": "Phone bill reimbursement of up to 500 INR per month is available to employees in sales and client-facing roles only.",
+              "similarity": 0.635,
+              "label": "CONTRADICTION",
+              "reason": "Negation polarity mismatch: claim negation=True, evidence negation=False."
+            }
+          ]
+        },
+        {
+          "claim": "client-facing roles only",
+          "consensus": 1.0,
+          "evidence": [
+            {
+              "doc": "hr_policy_reimbursement.txt",
+              "text": "Phone bill reimbursement of up to 500 INR per month is available to employees in sales and client-facing roles only.",
+              "similarity": 0.188,
+              "label": "ENTAILMENT",
+              "reason": "NLI model confirmed entailment from evidence (confidence: 0.662)."
+            }
+          ]
+        }
+      ],
+      "explanation": "Claim \"No, phone bill reimbursement is restricted to employees in sales\" contradicts evidence from hr_policy_reimbursement.txt: Negation polarity mismatch: claim negation=True, evidence negation=False."
+    },
+    "hallucinated_answer": "Yes, phone bill reimbursement of up to 500 INR per month is available to all remote employees regardless of role.",
+    "hallucinated_verification": {
+      "query": "Can software engineers working remotely claim monthly phone bill reimbursement?",
+      "answer": "Yes, phone bill reimbursement of up to 500 INR per month is available to all remote employees regardless of role.",
+      "trust_score": 0.0,
+      "status": "Hallucinated",
+      "claims": [
+        {
+          "claim": "Yes, phone bill reimbursement of up to 500 INR per month is available to all remote employees regardless of role",
+          "consensus": -1.0,
+          "evidence": [
+            {
+              "doc": "hr_policy_reimbursement.txt",
+              "text": "Phone bill reimbursement of up to 500 INR per month is available to employees in sales and client-facing roles only.",
+              "similarity": 0.747,
+              "label": "CONTRADICTION",
+              "reason": "NLI model detected contradiction with evidence (confidence: 0.999)."
+            }
+          ]
+        }
+      ],
+      "explanation": "Claim \"Yes, phone bill reimbursement of up to 500 INR per month is available to all remote employees regardless of role\" contradicts evidence from hr_policy_reimbursement.txt: NLI model detected contradiction with evidence (confidence: 0.999)."
+    }
+  }
+]

@@ -1,0 +1,10 @@
+IT AND CYBERSECURITY POLICY
+
+Section 1: Access Management and Authentication
+All corporate systems require multi-factor authentication managed through Okta. Requests for privileged access must be approved in writing by the Chief Information Security Officer (CISO). Access credentials must never be shared over Slack or external messaging tools.
+
+Section 2: Hardware Security and Devices
+Employees handling sensitive source code are issued a YubiKey hardware security key for cryptographic authentication. In the event of a suspected security breach, employees must immediately notify the Security Operations Center (SOC). Lost or stolen devices must be reported to the IT Service Desk within 2 hours.
+
+Section 3: Cloud Infrastructure and Travel Tools
+Corporate production workloads may only be deployed to Amazon Web Services (AWS). Official business travel accommodations must be reserved exclusively through the Concur corporate travel portal.

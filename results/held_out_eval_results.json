@@ -1,0 +1,363 @@
+{
+  "total_pairs": 10,
+  "strict_catch_rate": 90.0,
+  "lenient_catch_rate": 100.0,
+  "strict_caught": 9,
+  "lenient_caught": 10,
+  "correct_pass_rate": 100.0,
+  "details": [
+    {
+      "id": "heldout_01",
+      "source_doc": "it_security_policy.txt",
+      "source_passage": "All corporate systems require multi-factor authentication managed through Okta.",
+      "correct_answer": "Multi-factor authentication for corporate systems is managed through Okta.",
+      "correct_result": {
+        "trust_score": 100.0,
+        "status": "Trusted"
+      },
+      "hallucinated_answer": "Multi-factor authentication for corporate systems is managed through 1Password.",
+      "hallucinated_result": {
+        "trust_score": 0.0,
+        "status": "Hallucinated",
+        "explanation": "Claim \"Multi-factor authentication for corporate systems is managed through 1Password\" contradicts evidence from it_security_policy.txt: NLI model detected contradiction with evidence (confidence: 0.987).",
+        "claims": [
+          {
+            "claim": "Multi-factor authentication for corporate systems is managed through 1Password",
+            "consensus": -1.0,
+            "evidence": [
+              {
+                "doc": "it_security_policy.txt",
+                "text": "All corporate systems require multi-factor authentication managed through Okta.",
+                "similarity": 0.66,
+                "label": "CONTRADICTION",
+                "reason": "NLI model detected contradiction with evidence (confidence: 0.987)."
+              }
+            ]
+          }
+        ]
+      },
+      "strict_caught": true,
+      "lenient_caught": true,
+      "error_explanation": "Okta was replaced with 1Password."
+    },
+    {
+      "id": "heldout_02",
+      "source_doc": "it_security_policy.txt",
+      "source_passage": "Requests for privileged access must be approved in writing by the Chief Information Security Officer (CISO).",
+      "correct_answer": "Requests for privileged access must be approved in writing by the Chief Information Security Officer (CISO).",
+      "correct_result": {
+        "trust_score": 100.0,
+        "status": "Trusted"
+      },
+      "hallucinated_answer": "Requests for privileged access must be approved in writing by the Chief Technology Officer (CTO).",
+      "hallucinated_result": {
+        "trust_score": 0.0,
+        "status": "Hallucinated",
+        "explanation": "Claim \"Requests for privileged access must be approved in writing by the Chief Technology Officer (CTO)\" contradicts evidence from it_security_policy.txt: NLI model detected contradiction with evidence (confidence: 0.683).",
+        "claims": [
+          {
+            "claim": "Requests for privileged access must be approved in writing by the Chief Technology Officer (CTO)",
+            "consensus": -1.0,
+            "evidence": [
+              {
+                "doc": "it_security_policy.txt",
+                "text": "Requests for privileged access must be approved in writing by the Chief Information Security Officer (CISO).",
+                "similarity": 0.827,
+                "label": "CONTRADICTION",
+                "reason": "NLI model detected contradiction with evidence (confidence: 0.683)."
+              }
+            ]
+          }
+        ]
+      },
+      "strict_caught": true,
+      "lenient_caught": true,
+      "error_explanation": "Chief Information Security Officer (CISO) was swapped for Chief Technology Officer (CTO)."
+    },
+    {
+      "id": "heldout_03",
+      "source_doc": "it_security_policy.txt",
+      "source_passage": "Access credentials must never be shared over Slack or external messaging tools.",
+      "correct_answer": "Access credentials must never be shared over Slack or external messaging tools.",
+      "correct_result": {
+        "trust_score": 100.0,
+        "status": "Trusted"
+      },
+      "hallucinated_answer": "Access credentials must never be shared over Microsoft Teams or external messaging tools.",
+      "hallucinated_result": {
+        "trust_score": 50.0,
+        "status": "Uncertain",
+        "explanation": "Claim \"Access credentials must never be shared over Microsoft Teams or external messaging tools\" is not strongly supported by any retrieved evidence (low consensus score: 0.0).",
+        "claims": [
+          {
+            "claim": "Access credentials must never be shared over Microsoft Teams or external messaging tools",
+            "consensus": 0.0,
+            "evidence": [
+              {
+                "doc": "it_security_policy.txt",
+                "text": "Access credentials must never be shared over Slack or external messaging tools.",
+                "similarity": 0.757,
+                "label": "NEUTRAL",
+                "reason": "Evidence neither entails nor directly contradicts claim (confidence: 0.72)."
+              }
+            ]
+          }
+        ]
+      },
+      "strict_caught": false,
+      "lenient_caught": true,
+      "error_explanation": "Slack was replaced with Microsoft Teams."
+    },
+    {
+      "id": "heldout_04",
+      "source_doc": "it_security_policy.txt",
+      "source_passage": "Employees handling sensitive source code are issued a YubiKey hardware security key for cryptographic authentication.",
+      "correct_answer": "Employees handling sensitive source code are issued a YubiKey hardware security key for cryptographic authentication.",
+      "correct_result": {
+        "trust_score": 100.0,
+        "status": "Trusted"
+      },
+      "hallucinated_answer": "Employees handling sensitive source code are issued an RSA SecurID token for cryptographic authentication.",
+      "hallucinated_result": {
+        "trust_score": 0.0,
+        "status": "Hallucinated",
+        "explanation": "Claim \"Employees handling sensitive source code are issued an RSA SecurID token for cryptographic authentication\" contradicts evidence from it_security_policy.txt: NLI model detected contradiction with evidence (confidence: 0.94).",
+        "claims": [
+          {
+            "claim": "Employees handling sensitive source code are issued an RSA SecurID token for cryptographic authentication",
+            "consensus": -1.0,
+            "evidence": [
+              {
+                "doc": "it_security_policy.txt",
+                "text": "Employees handling sensitive source code are issued a YubiKey hardware security key for cryptographic authentication.",
+                "similarity": 0.687,
+                "label": "CONTRADICTION",
+                "reason": "NLI model detected contradiction with evidence (confidence: 0.94)."
+              }
+            ]
+          }
+        ]
+      },
+      "strict_caught": true,
+      "lenient_caught": true,
+      "error_explanation": "YubiKey was replaced with RSA SecurID token."
+    },
+    {
+      "id": "heldout_05",
+      "source_doc": "it_security_policy.txt",
+      "source_passage": "In the event of a suspected security breach, employees must immediately notify the Security Operations Center (SOC).",
+      "correct_answer": "In the event of a suspected security breach, employees must immediately notify the Security Operations Center (SOC).",
+      "correct_result": {
+        "trust_score": 100.0,
+        "status": "Trusted"
+      },
+      "hallucinated_answer": "In the event of a suspected security breach, employees must immediately notify the Network Operations Center (NOC).",
+      "hallucinated_result": {
+        "trust_score": 0.0,
+        "status": "Hallucinated",
+        "explanation": "Claim \"In the event of a suspected security breach, employees must immediately notify the Network Operations Center (NOC)\" contradicts evidence from it_security_policy.txt: NLI model detected contradiction with evidence (confidence: 0.846).",
+        "claims": [
+          {
+            "claim": "In the event of a suspected security breach, employees must immediately notify the Network Operations Center (NOC)",
+            "consensus": -1.0,
+            "evidence": [
+              {
+                "doc": "it_security_policy.txt",
+                "text": "In the event of a suspected security breach, employees must immediately notify the Security Operations Center (SOC).",
+                "similarity": 0.704,
+                "label": "CONTRADICTION",
+                "reason": "NLI model detected contradiction with evidence (confidence: 0.846)."
+              }
+            ]
+          }
+        ]
+      },
+      "strict_caught": true,
+      "lenient_caught": true,
+      "error_explanation": "Security Operations Center (SOC) was replaced with Network Operations Center (NOC)."
+    },
+    {
+      "id": "heldout_06",
+      "source_doc": "it_security_policy.txt",
+      "source_passage": "Lost or stolen devices must be reported to the IT Service Desk within 2 hours.",
+      "correct_answer": "Lost or stolen devices must be reported to the IT Service Desk within 2 hours.",
+      "correct_result": {
+        "trust_score": 100.0,
+        "status": "Trusted"
+      },
+      "hallucinated_answer": "Lost or stolen devices must be reported to the Facilities Helpdesk within 2 hours.",
+      "hallucinated_result": {
+        "trust_score": 0.0,
+        "status": "Hallucinated",
+        "explanation": "Claim \"Lost or stolen devices must be reported to the Facilities Helpdesk within 2 hours\" contradicts evidence from it_security_policy.txt: NLI model detected contradiction with evidence (confidence: 0.802).",
+        "claims": [
+          {
+            "claim": "Lost or stolen devices must be reported to the Facilities Helpdesk within 2 hours",
+            "consensus": -1.0,
+            "evidence": [
+              {
+                "doc": "it_security_policy.txt",
+                "text": "Lost or stolen devices must be reported to the IT Service Desk within 2 hours.",
+                "similarity": 0.822,
+                "label": "CONTRADICTION",
+                "reason": "NLI model detected contradiction with evidence (confidence: 0.802)."
+              }
+            ]
+          }
+        ]
+      },
+      "strict_caught": true,
+      "lenient_caught": true,
+      "error_explanation": "IT Service Desk was replaced with Facilities Helpdesk."
+    },
+    {
+      "id": "heldout_07",
+      "source_doc": "it_security_policy.txt",
+      "source_passage": "Corporate production workloads may only be deployed to Amazon Web Services (AWS).",
+      "correct_answer": "Corporate production workloads may only be deployed to Amazon Web Services (AWS).",
+      "correct_result": {
+        "trust_score": 100.0,
+        "status": "Trusted"
+      },
+      "hallucinated_answer": "Corporate production workloads may only be deployed to Microsoft Azure.",
+      "hallucinated_result": {
+        "trust_score": 0.0,
+        "status": "Hallucinated",
+        "explanation": "Claim \"Corporate production workloads may only be deployed to Microsoft Azure\" contradicts evidence from it_security_policy.txt: NLI model detected contradiction with evidence (confidence: 0.972).",
+        "claims": [
+          {
+            "claim": "Corporate production workloads may only be deployed to Microsoft Azure",
+            "consensus": -1.0,
+            "evidence": [
+              {
+                "doc": "it_security_policy.txt",
+                "text": "Corporate production workloads may only be deployed to Amazon Web Services (AWS).",
+                "similarity": 0.715,
+                "label": "CONTRADICTION",
+                "reason": "NLI model detected contradiction with evidence (confidence: 0.972)."
+              }
+            ]
+          }
+        ]
+      },
+      "strict_caught": true,
+      "lenient_caught": true,
+      "error_explanation": "Amazon Web Services (AWS) was replaced with Microsoft Azure."
+    },
+    {
+      "id": "heldout_08",
+      "source_doc": "it_security_policy.txt",
+      "source_passage": "Official business travel accommodations must be reserved exclusively through the Concur corporate travel portal.",
+      "correct_answer": "Official business travel accommodations must be reserved exclusively through the Concur corporate travel portal.",
+      "correct_result": {
+        "trust_score": 100.0,
+        "status": "Trusted"
+      },
+      "hallucinated_answer": "Official business travel accommodations must be reserved exclusively through the Expedia Corporate travel portal.",
+      "hallucinated_result": {
+        "trust_score": 0.0,
+        "status": "Hallucinated",
+        "explanation": "Claim \"Official business travel accommodations must be reserved exclusively through the Expedia Corporate travel portal\" contradicts evidence from it_security_policy.txt: NLI model detected contradiction with evidence (confidence: 0.998).",
+        "claims": [
+          {
+            "claim": "Official business travel accommodations must be reserved exclusively through the Expedia Corporate travel portal",
+            "consensus": -1.0,
+            "evidence": [
+              {
+                "doc": "it_security_policy.txt",
+                "text": "Official business travel accommodations must be reserved exclusively through the Concur corporate travel portal.",
+                "similarity": 0.77,
+                "label": "CONTRADICTION",
+                "reason": "NLI model detected contradiction with evidence (confidence: 0.998)."
+              }
+            ]
+          }
+        ]
+      },
+      "strict_caught": true,
+      "lenient_caught": true,
+      "error_explanation": "Concur was replaced with Expedia Corporate."
+    },
+    {
+      "id": "heldout_09",
+      "source_doc": "hr_policy_reimbursement.txt",
+      "source_passage": "Phone bill reimbursement of up to 500 INR per month is available to employees in sales and client-facing roles only.",
+      "correct_answer": "Phone bill reimbursement is available only to employees in sales and client-facing roles.",
+      "correct_result": {
+        "trust_score": 100.0,
+        "status": "Trusted"
+      },
+      "hallucinated_answer": "Phone bill reimbursement is available only to employees in marketing and human resources roles.",
+      "hallucinated_result": {
+        "trust_score": 0.0,
+        "status": "Hallucinated",
+        "explanation": "Claim \"Phone bill reimbursement is available only to employees in marketing\" contradicts evidence from hr_policy_reimbursement.txt: NLI model detected contradiction with evidence (confidence: 0.997).",
+        "claims": [
+          {
+            "claim": "Phone bill reimbursement is available only to employees in marketing",
+            "consensus": -1.0,
+            "evidence": [
+              {
+                "doc": "hr_policy_reimbursement.txt",
+                "text": "Phone bill reimbursement of up to 500 INR per month is available to employees in sales and client-facing roles only.",
+                "similarity": 0.678,
+                "label": "CONTRADICTION",
+                "reason": "NLI model detected contradiction with evidence (confidence: 0.997)."
+              }
+            ]
+          },
+          {
+            "claim": "human resources roles",
+            "consensus": 0.0,
+            "evidence": [
+              {
+                "doc": "hr_policy_reimbursement.txt",
+                "text": "Phone bill reimbursement of up to 500 INR per month is available to employees in sales and client-facing roles only.",
+                "similarity": 0.059,
+                "label": "NEUTRAL",
+                "reason": "Evidence neither entails nor directly contradicts claim (confidence: 0.526)."
+              }
+            ]
+          }
+        ]
+      },
+      "strict_caught": true,
+      "lenient_caught": true,
+      "error_explanation": "Sales and client-facing roles was swapped for marketing and human resources roles."
+    },
+    {
+      "id": "heldout_10",
+      "source_doc": "hr_policy_wfh.txt",
+      "source_passage": "Employees in customer-facing roles may work from home up to 1 day per week only.",
+      "correct_answer": "Employees in customer-facing roles may work from home up to 1 day per week only.",
+      "correct_result": {
+        "trust_score": 100.0,
+        "status": "Trusted"
+      },
+      "hallucinated_answer": "Employees in backend engineering roles may work from home up to 1 day per week only.",
+      "hallucinated_result": {
+        "trust_score": 0.0,
+        "status": "Hallucinated",
+        "explanation": "Claim \"Employees in backend engineering roles may work from home up to 1 day per week only\" contradicts evidence from hr_policy_wfh.txt: NLI model detected contradiction with evidence (confidence: 0.949).",
+        "claims": [
+          {
+            "claim": "Employees in backend engineering roles may work from home up to 1 day per week only",
+            "consensus": -1.0,
+            "evidence": [
+              {
+                "doc": "hr_policy_wfh.txt",
+                "text": "Employees in customer-facing roles may work from home up to 1 day per week only.",
+                "similarity": 0.866,
+                "label": "CONTRADICTION",
+                "reason": "NLI model detected contradiction with evidence (confidence: 0.949)."
+              }
+            ]
+          }
+        ]
+      },
+      "strict_caught": true,
+      "lenient_caught": true,
+      "error_explanation": "Customer-facing roles was swapped for backend engineering roles."
+    }
+  ]
+}

@@ -1,0 +1,164 @@
+{
+  "normality_test": {
+    "test": "Shapiro-Wilk Test for Normality",
+    "statistic": 0.7188,
+    "p_value": 1.8171206242279818e-14,
+    "is_normal": false,
+    "interpretation": "Trust scores deviate significantly from a normal distribution (p < 0.001); non-parametric tests are required."
+  },
+  "kruskal_wallis": {
+    "test": "Kruskal-Wallis H-test across Support Categories",
+    "null_hypothesis": "The distribution of trust scores is identical across Supported, Partially Supported, Unsupported, and Contradictory categories.",
+    "alternative_hypothesis": "At least one category distribution stochastically dominates another in trust scores.",
+    "k_groups": 4,
+    "sample_sizes": {
+      "Supported": 30,
+      "Partially Supported": 12,
+      "Unsupported": 24,
+      "Contradictory": 64
+    },
+    "h_statistic": 100.5568,
+    "p_value": 1.179701985889983e-21,
+    "effect_size_eta_squared": 0.7743,
+    "significant_alpha_05": true,
+    "interpretation": "Highly significant score separation across ground-truth support categories (p < 0.0001)."
+  },
+  "pairwise_mann_whitney": [
+    {
+      "group1": "Supported",
+      "group2": "Contradictory",
+      "n1": 30,
+      "n2": 64,
+      "u_statistic": 1914.0,
+      "p_raw": 6.217585142776344e-20,
+      "rank_biserial_r": -0.9937,
+      "p_adjusted_holm": 3.730551085665807e-19,
+      "significant_holm_05": true
+    },
+    {
+      "group1": "Supported",
+      "group2": "Unsupported",
+      "n1": 30,
+      "n2": 24,
+      "u_statistic": 700.5,
+      "p_raw": 1.0850258282246136e-10,
+      "rank_biserial_r": -0.9458,
+      "p_adjusted_holm": 5.425129141123068e-10,
+      "significant_holm_05": true
+    },
+    {
+      "group1": "Partially Supported",
+      "group2": "Contradictory",
+      "n1": 12,
+      "n2": 64,
+      "u_statistic": 680.0,
+      "p_raw": 3.640696043043834e-10,
+      "rank_biserial_r": -0.7708,
+      "p_adjusted_holm": 1.4562784172175336e-09,
+      "significant_holm_05": true
+    },
+    {
+      "group1": "Supported",
+      "group2": "Partially Supported",
+      "n1": 30,
+      "n2": 12,
+      "u_statistic": 345.0,
+      "p_raw": 4.9001093789075747e-08,
+      "rank_biserial_r": -0.9167,
+      "p_adjusted_holm": 1.4700328136722724e-07,
+      "significant_holm_05": true
+    },
+    {
+      "group1": "Unsupported",
+      "group2": "Contradictory",
+      "n1": 24,
+      "n2": 64,
+      "u_statistic": 1136.0,
+      "p_raw": 4.778995159807364e-07,
+      "rank_biserial_r": -0.4792,
+      "p_adjusted_holm": 9.557990319614728e-07,
+      "significant_holm_05": true
+    },
+    {
+      "group1": "Partially Supported",
+      "group2": "Unsupported",
+      "n1": 12,
+      "n2": 24,
+      "u_statistic": 186.0,
+      "p_raw": 0.0942633510110294,
+      "rank_biserial_r": -0.2917,
+      "p_adjusted_holm": 0.0942633510110294,
+      "significant_holm_05": false
+    }
+  ],
+  "ablation_paired_tests": {
+    "no_contradiction": {
+      "mcnemar_test": {
+        "b_full_correct_abl_incorrect": 1,
+        "c_full_incorrect_abl_correct": 0,
+        "discordant_total": 1,
+        "chi2_continuity": 0.0,
+        "p_exact": 1.0,
+        "significant_p05": false,
+        "interpretation": "Performance difference is not statistically significant."
+      },
+      "wilcoxon_signed_rank": {
+        "w_statistic": 0.0,
+        "p_value": 2.0953356591934955e-17,
+        "n_differing_pairs": 73,
+        "significant_p05": true
+      }
+    },
+    "no_similarity": {
+      "mcnemar_test": {
+        "b_full_correct_abl_incorrect": 0,
+        "c_full_incorrect_abl_correct": 0,
+        "discordant_total": 0,
+        "chi2_continuity": 0.0,
+        "p_exact": 1.0,
+        "significant_p05": false,
+        "interpretation": "Performance difference is not statistically significant."
+      },
+      "wilcoxon_signed_rank": {
+        "w_statistic": 0.0,
+        "p_value": 0.0455002638963584,
+        "n_differing_pairs": 4,
+        "significant_p05": true
+      }
+    },
+    "no_graph": {
+      "mcnemar_test": {
+        "b_full_correct_abl_incorrect": 0,
+        "c_full_incorrect_abl_correct": 0,
+        "discordant_total": 0,
+        "chi2_continuity": 0.0,
+        "p_exact": 1.0,
+        "significant_p05": false,
+        "interpretation": "Performance difference is not statistically significant."
+      },
+      "wilcoxon_signed_rank": {
+        "w_statistic": 0.0,
+        "p_value": 0.31731050786291415,
+        "n_differing_pairs": 1,
+        "significant_p05": false
+      }
+    },
+    "mean_aggregation": {
+      "mcnemar_test": {
+        "b_full_correct_abl_incorrect": 0,
+        "c_full_incorrect_abl_correct": 0,
+        "discordant_total": 0,
+        "chi2_continuity": 0.0,
+        "p_exact": 1.0,
+        "significant_p05": false,
+        "interpretation": "Performance difference is not statistically significant."
+      },
+      "wilcoxon_signed_rank": {
+        "w_statistic": 0.0,
+        "p_value": 0.0012968957989590631,
+        "n_differing_pairs": 12,
+        "significant_p05": true
+      }
+    }
+  }
+}

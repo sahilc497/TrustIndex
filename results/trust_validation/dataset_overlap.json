@@ -1,0 +1,162 @@
+{
+  "total_validation_cases": 130,
+  "cases_from_original_77": 88,
+  "cases_from_held_out_10": 11,
+  "cases_newly_constructed": 31,
+  "cases_unknown_origin": 0,
+  "exact_duplicates": {
+    "total_exact_duplicates": 99,
+    "exact_duplicates_original_77_correct": {
+      "count": 24,
+      "case_ids": [
+        "val_c1_leave_01",
+        "val_c1_leave_02",
+        "val_c1_leave_03",
+        "val_c1_leave_04",
+        "val_c1_leave_05",
+        "val_c1_leave_06",
+        "val_c1_leave_07",
+        "val_c1_leave_08",
+        "val_c1_reimb_01",
+        "val_c1_reimb_02",
+        "val_c1_reimb_03",
+        "val_c1_reimb_04",
+        "val_c1_reimb_05",
+        "val_c1_reimb_06",
+        "val_c1_reimb_07",
+        "val_c1_reimb_08",
+        "val_c1_wfh_01",
+        "val_c1_wfh_02",
+        "val_c1_wfh_03",
+        "val_c1_wfh_04",
+        "val_c1_wfh_05",
+        "val_c1_wfh_06",
+        "val_c1_wfh_07",
+        "val_c1_wfh_08"
+      ]
+    },
+    "exact_duplicates_original_77_hallucinated": {
+      "count": 64,
+      "case_ids": [
+        "val_c2_leave_12",
+        "val_c2_reimb_02",
+        "val_c2_reimb_08",
+        "val_c2_reimb_09",
+        "val_c2_leave_018",
+        "val_c2_leave_020",
+        "val_c2_wfh_011",
+        "val_c2_wfh_024",
+        "val_c2_reimb_012",
+        "val_c2_reimb_019",
+        "val_c2_reimb_024",
+        "val_c3_leave_021",
+        "val_c3_leave_025",
+        "val_c3_wfh_015",
+        "val_c3_wfh_020",
+        "val_c3_reimb_014",
+        "val_c3_reimb_018",
+        "val_c6_leave_04",
+        "val_c6_leave_07",
+        "val_c6_wfh_02",
+        "val_c6_wfh_08",
+        "val_c6_reimb_05",
+        "val_c6_reimb_07",
+        "val_c6_leave_016",
+        "val_c6_leave_023",
+        "val_c6_wfh_016",
+        "val_c6_wfh_023",
+        "val_c6_reimb_015",
+        "val_c6_reimb_021",
+        "val_c7_leave_01",
+        "val_c7_leave_02",
+        "val_c7_leave_03",
+        "val_c7_leave_05",
+        "val_c7_leave_06",
+        "val_c7_leave_08",
+        "val_c7_leave_10",
+        "val_c7_leave_11",
+        "val_c7_wfh_01",
+        "val_c7_wfh_03",
+        "val_c7_wfh_04",
+        "val_c7_wfh_07",
+        "val_c7_wfh_09",
+        "val_c7_wfh_10",
+        "val_c7_reimb_01",
+        "val_c7_reimb_03",
+        "val_c7_reimb_06",
+        "val_c7_reimb_10",
+        "val_c7_leave_015",
+        "val_c7_leave_017",
+        "val_c8_leave_09",
+        "val_c8_wfh_05",
+        "val_c8_wfh_06",
+        "val_c8_reimb_04",
+        "val_c8_leave_013",
+        "val_c8_leave_014",
+        "val_c8_leave_024",
+        "val_c8_wfh_013",
+        "val_c8_wfh_014",
+        "val_c8_wfh_019",
+        "val_c8_wfh_021",
+        "val_c8_reimb_011",
+        "val_c8_reimb_013",
+        "val_c8_reimb_020",
+        "val_c8_reimb_025"
+      ]
+    },
+    "exact_duplicates_held_out_10_correct": {
+      "count": 6,
+      "case_ids": [
+        "val_c1_heldout_01",
+        "val_c1_heldout_02",
+        "val_c1_heldout_03",
+        "val_c1_heldout_04",
+        "val_c1_heldout_05",
+        "val_c1_heldout_06"
+      ]
+    },
+    "exact_duplicates_held_out_10_hallucinated": {
+      "count": 5,
+      "case_ids": [
+        "val_c8_heldout_01",
+        "val_c8_heldout_02",
+        "val_c8_heldout_03",
+        "val_c8_heldout_04",
+        "val_c8_heldout_05"
+      ]
+    }
+  },
+  "internal_qe_overlap": {
+    "num_shared_query_evidence_pairs": 29,
+    "total_cases_involved": 59,
+    "description": "Validation cases sharing the same query and evidence but testing different answers (e.g. Correct Answer in Case 1 vs. Hallucinated Answer in Cases 6-8).",
+    "sample_mappings": {
+      "how many annual paid leaves do employees get?": [
+        "val_c1_leave_01",
+        "val_c2_extra_03",
+        "val_c7_leave_01"
+      ],
+      "can unused annual leave be carried forward?": [
+        "val_c1_leave_02",
+        "val_c7_leave_02"
+      ],
+      "how much advance notice is required to request annual leave?": [
+        "val_c1_leave_03",
+        "val_c7_leave_03"
+      ],
+      "are employees paid out for unused annual leave when they resign?": [
+        "val_c1_leave_04",
+        "val_c6_leave_04"
+      ],
+      "how many sick leaves do employees get per year?": [
+        "val_c1_leave_05",
+        "val_c7_leave_05"
+      ]
+    }
+  },
+  "leakage_assessment": {
+    "potential_leakage_count": 88,
+    "clean_unseen_cases_count": 42,
+    "notes": "88 cases originate directly from the original 77-item benchmark (data/eval_dataset.json) where initial detector development in Phase 1 took place. These constitute potential evaluation leakage if interpreted as a fully independent blind test. The 11 held-out cases and 31 newly constructed cases (42 cases total) had zero influence on rule development."
+  }
+}

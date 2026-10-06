@@ -1,0 +1,346 @@
+[
+  {
+    "id": "leave_021",
+    "error_type": "causal_distortion",
+    "query": "What causes an employee to transition to full leave entitlements?",
+    "source_doc": "hr_policy_leave.txt",
+    "source_passage": "Full leave entitlements apply once probation is successfully completed and confirmed in writing by the reporting manager.",
+    "correct_answer": "Full leave entitlements apply because probation is successfully completed and confirmed in writing by the reporting manager.",
+    "correct_verification": {
+      "query": "What causes an employee to transition to full leave entitlements?",
+      "answer": "Full leave entitlements apply because probation is successfully completed and confirmed in writing by the reporting manager.",
+      "trust_score": 100.0,
+      "status": "Trusted",
+      "claims": [
+        {
+          "claim": "Full leave entitlements apply because probation is successfully completed",
+          "consensus": 1.0,
+          "evidence": [
+            {
+              "doc": "hr_policy_leave.txt",
+              "text": "Full leave entitlements apply once probation is successfully completed and confirmed in writing by the reporting manager.",
+              "similarity": 0.839,
+              "label": "ENTAILMENT",
+              "reason": "NLI model confirmed entailment from evidence (confidence: 0.967)."
+            }
+          ]
+        },
+        {
+          "claim": "confirmed in writing by the reporting manager",
+          "consensus": 1.0,
+          "evidence": [
+            {
+              "doc": "hr_policy_leave.txt",
+              "text": "Full leave entitlements apply once probation is successfully completed and confirmed in writing by the reporting manager.",
+              "similarity": 0.401,
+              "label": "ENTAILMENT",
+              "reason": "NLI model confirmed entailment from evidence (confidence: 0.962)."
+            }
+          ]
+        }
+      ],
+      "explanation": "All claims are well supported by retrieved evidence with no contradictions detected."
+    },
+    "hallucinated_answer": "Full leave entitlements apply because the employee reached one full year of continuous tenure.",
+    "hallucinated_verification": {
+      "query": "What causes an employee to transition to full leave entitlements?",
+      "answer": "Full leave entitlements apply because the employee reached one full year of continuous tenure.",
+      "trust_score": 50.0,
+      "status": "Uncertain",
+      "claims": [
+        {
+          "claim": "Full leave entitlements apply because the employee reached one full year of continuous tenure",
+          "consensus": 0.0,
+          "evidence": [
+            {
+              "doc": "hr_policy_leave.txt",
+              "text": "Full leave entitlements apply once probation is successfully completed and confirmed in writing by the reporting manager.",
+              "similarity": 0.577,
+              "label": "NEUTRAL",
+              "reason": "Evidence neither entails nor directly contradicts claim (confidence: 0.679)."
+            }
+          ]
+        }
+      ],
+      "explanation": "Claim \"Full leave entitlements apply because the employee reached one full year of continuous tenure\" is not strongly supported by any retrieved evidence (low consensus score: 0.0)."
+    }
+  },
+  {
+    "id": "leave_025",
+    "error_type": "causal_distortion",
+    "query": "Why does an employee need to submit a medical certificate for 4 days of sick leave?",
+    "source_doc": "hr_policy_leave.txt",
+    "source_passage": "Sick leave exceeding 3 consecutive days requires a medical certificate submitted to HR within 5 working days of returning to work.",
+    "correct_answer": "A certificate is required because the sick leave duration exceeded 3 consecutive days.",
+    "correct_verification": {
+      "query": "Why does an employee need to submit a medical certificate for 4 days of sick leave?",
+      "answer": "A certificate is required because the sick leave duration exceeded 3 consecutive days.",
+      "trust_score": 100.0,
+      "status": "Trusted",
+      "claims": [
+        {
+          "claim": "A certificate is required because the sick leave duration exceeded 3 consecutive days",
+          "consensus": 1.0,
+          "evidence": [
+            {
+              "doc": "hr_policy_leave.txt",
+              "text": "Sick leave exceeding 3 consecutive days requires a medical certificate submitted to HR within 5 working days of returning to work.",
+              "similarity": 0.803,
+              "label": "ENTAILMENT",
+              "reason": "NLI model confirmed entailment from evidence (confidence: 0.936)."
+            }
+          ]
+        }
+      ],
+      "explanation": "All claims are well supported by retrieved evidence with no contradictions detected."
+    },
+    "hallucinated_answer": "A certificate is required because the employee is still serving their probationary period.",
+    "hallucinated_verification": {
+      "query": "Why does an employee need to submit a medical certificate for 4 days of sick leave?",
+      "answer": "A certificate is required because the employee is still serving their probationary period.",
+      "trust_score": 50.0,
+      "status": "Uncertain",
+      "claims": [
+        {
+          "claim": "A certificate is required because the employee is still serving their probationary period",
+          "consensus": 0.0,
+          "evidence": [
+            {
+              "doc": "hr_policy_leave.txt",
+              "text": "Sick leave exceeding 3 consecutive days requires a medical certificate submitted to HR within 5 working days of returning to work.",
+              "similarity": 0.318,
+              "label": "NEUTRAL",
+              "reason": "Evidence neither entails nor directly contradicts claim (confidence: 0.995)."
+            }
+          ]
+        }
+      ],
+      "explanation": "Claim \"A certificate is required because the employee is still serving their probationary period\" is not strongly supported by any retrieved evidence (low consensus score: 0.0)."
+    }
+  },
+  {
+    "id": "wfh_015",
+    "error_type": "causal_distortion",
+    "query": "Why is a hybrid employee denied the 15,000 INR home office setup allowance?",
+    "source_doc": "hr_policy_wfh.txt",
+    "source_passage": "This allowance is not provided for employees on the standard 2-day hybrid arrangement.",
+    "correct_answer": "The allowance is denied because the employee is on the standard 2-day hybrid arrangement.",
+    "correct_verification": {
+      "query": "Why is a hybrid employee denied the 15,000 INR home office setup allowance?",
+      "answer": "The allowance is denied because the employee is on the standard 2-day hybrid arrangement.",
+      "trust_score": 0.0,
+      "status": "Hallucinated",
+      "claims": [
+        {
+          "claim": "The allowance is denied because the employee is on the standard 2-day hybrid arrangement",
+          "consensus": -1.0,
+          "evidence": [
+            {
+              "doc": "hr_policy_wfh.txt",
+              "text": "This allowance is not provided for employees on the standard 2-day hybrid arrangement.",
+              "similarity": 0.85,
+              "label": "CONTRADICTION",
+              "reason": "Negation polarity mismatch: claim negation=False, evidence negation=True."
+            }
+          ]
+        }
+      ],
+      "explanation": "Claim \"The allowance is denied because the employee is on the standard 2-day hybrid arrangement\" contradicts evidence from hr_policy_wfh.txt: Negation polarity mismatch: claim negation=False, evidence negation=True."
+    },
+    "hallucinated_answer": "The allowance is denied because the employee has not yet completed their 90-day probation period.",
+    "hallucinated_verification": {
+      "query": "Why is a hybrid employee denied the 15,000 INR home office setup allowance?",
+      "answer": "The allowance is denied because the employee has not yet completed their 90-day probation period.",
+      "trust_score": 0.0,
+      "status": "Hallucinated",
+      "claims": [
+        {
+          "claim": "The allowance is denied because the employee has not yet completed their 90-day probation period",
+          "consensus": -1.0,
+          "evidence": [
+            {
+              "doc": "hr_policy_wfh.txt",
+              "text": "This allowance is not provided for employees on the standard 2-day hybrid arrangement.",
+              "similarity": 0.533,
+              "label": "CONTRADICTION",
+              "reason": "Claim contains number(s) ['90'] not present in evidence (evidence contains ['2']); likely numeric substitution."
+            }
+          ]
+        }
+      ],
+      "explanation": "Claim \"The allowance is denied because the employee has not yet completed their 90-day probation period\" contradicts evidence from hr_policy_wfh.txt: Claim contains number(s) ['90'] not present in evidence (evidence contains ['2']); likely numeric substitution."
+    }
+  },
+  {
+    "id": "wfh_020",
+    "error_type": "causal_distortion",
+    "query": "Why must an employee submit a work-from-home renewal after 6 months?",
+    "source_doc": "hr_policy_wfh.txt",
+    "source_passage": "Approval is granted by the direct reporting manager and must be renewed every 6 months.",
+    "correct_answer": "Renewal is required because WFH approval expires every 6 months under standard company policy.",
+    "correct_verification": {
+      "query": "Why must an employee submit a work-from-home renewal after 6 months?",
+      "answer": "Renewal is required because WFH approval expires every 6 months under standard company policy.",
+      "trust_score": 50.0,
+      "status": "Uncertain",
+      "claims": [
+        {
+          "claim": "Renewal is required because WFH approval expires every 6 months under standard company policy",
+          "consensus": 0.0,
+          "evidence": [
+            {
+              "doc": "hr_policy_wfh.txt",
+              "text": "Approval is granted by the direct reporting manager and must be renewed every 6 months.",
+              "similarity": 0.588,
+              "label": "NEUTRAL",
+              "reason": "Evidence neither entails nor directly contradicts claim (confidence: 0.996)."
+            }
+          ]
+        }
+      ],
+      "explanation": "Claim \"Renewal is required because WFH approval expires every 6 months under standard company policy\" is not strongly supported by any retrieved evidence (low consensus score: 0.0)."
+    },
+    "hallucinated_answer": "Renewal is required because the employee transitioned from an engineering role to a customer-facing role.",
+    "hallucinated_verification": {
+      "query": "Why must an employee submit a work-from-home renewal after 6 months?",
+      "answer": "Renewal is required because the employee transitioned from an engineering role to a customer-facing role.",
+      "trust_score": 50.0,
+      "status": "Uncertain",
+      "claims": [
+        {
+          "claim": "Renewal is required because the employee transitioned from an engineering role to a customer-facing role",
+          "consensus": 0.0,
+          "evidence": [
+            {
+              "doc": "hr_policy_wfh.txt",
+              "text": "Approval is granted by the direct reporting manager and must be renewed every 6 months.",
+              "similarity": 0.403,
+              "label": "NEUTRAL",
+              "reason": "Evidence neither entails nor directly contradicts claim (confidence: 0.997)."
+            }
+          ]
+        }
+      ],
+      "explanation": "Claim \"Renewal is required because the employee transitioned from an engineering role to a customer-facing role\" is not strongly supported by any retrieved evidence (low consensus score: 0.0)."
+    }
+  },
+  {
+    "id": "reimb_014",
+    "error_type": "causal_distortion",
+    "query": "Why was a travel reimbursement claim submitted after 35 days refused processing?",
+    "source_doc": "hr_policy_reimbursement.txt",
+    "source_passage": "Claims submitted after 30 days will not be processed except with written approval from the finance director.",
+    "correct_answer": "It was refused processing because it was submitted past the 30-day deadline without written approval from the finance director.",
+    "correct_verification": {
+      "query": "Why was a travel reimbursement claim submitted after 35 days refused processing?",
+      "answer": "It was refused processing because it was submitted past the 30-day deadline without written approval from the finance director.",
+      "trust_score": 100.0,
+      "status": "Trusted",
+      "claims": [
+        {
+          "claim": "It was refused processing because it was submitted past the 30-day deadline without written approval from the finance director",
+          "consensus": 1.0,
+          "evidence": [
+            {
+              "doc": "hr_policy_reimbursement.txt",
+              "text": "Claims submitted after 30 days will not be processed except with written approval from the finance director.",
+              "similarity": 0.713,
+              "label": "ENTAILMENT",
+              "reason": "NLI model confirmed entailment from evidence (confidence: 0.835)."
+            }
+          ]
+        }
+      ],
+      "explanation": "All claims are well supported by retrieved evidence with no contradictions detected."
+    },
+    "hallucinated_answer": "It was refused processing because the expense exceeded the 5,000 INR limit for single-manager approval.",
+    "hallucinated_verification": {
+      "query": "Why was a travel reimbursement claim submitted after 35 days refused processing?",
+      "answer": "It was refused processing because the expense exceeded the 5,000 INR limit for single-manager approval.",
+      "trust_score": 0.0,
+      "status": "Hallucinated",
+      "claims": [
+        {
+          "claim": "It was refused processing because the expense exceeded the 5,000 INR limit for single-manager approval",
+          "consensus": -1.0,
+          "evidence": [
+            {
+              "doc": "hr_policy_reimbursement.txt",
+              "text": "Claims submitted after 30 days will not be processed except with written approval from the finance director.",
+              "similarity": 0.369,
+              "label": "CONTRADICTION",
+              "reason": "Claim contains number(s) ['5000'] not present in evidence (evidence contains ['30']); likely numeric substitution."
+            }
+          ]
+        }
+      ],
+      "explanation": "Claim \"It was refused processing because the expense exceeded the 5,000 INR limit for single-manager approval\" contradicts evidence from hr_policy_reimbursement.txt: Claim contains number(s) ['5000'] not present in evidence (evidence contains ['30']); likely numeric substitution."
+    }
+  },
+  {
+    "id": "reimb_018",
+    "error_type": "causal_distortion",
+    "query": "Why does a 6,000 INR expense claim need approval from the finance department?",
+    "source_doc": "hr_policy_reimbursement.txt",
+    "source_passage": "All reimbursement claims above 5,000 INR require approval from both the reporting manager and the finance department.",
+    "correct_answer": "It requires finance department approval because all claims exceeding 5,000 INR require approval from both the manager and the finance department.",
+    "correct_verification": {
+      "query": "Why does a 6,000 INR expense claim need approval from the finance department?",
+      "answer": "It requires finance department approval because all claims exceeding 5,000 INR require approval from both the manager and the finance department.",
+      "trust_score": 100.0,
+      "status": "Trusted",
+      "claims": [
+        {
+          "claim": "It requires finance department approval because all claims exceeding 5,000 INR require approval from both the manager",
+          "consensus": 1.0,
+          "evidence": [
+            {
+              "doc": "hr_policy_reimbursement.txt",
+              "text": "All reimbursement claims above 5,000 INR require approval from both the reporting manager and the finance department.",
+              "similarity": 0.762,
+              "label": "ENTAILMENT",
+              "reason": "NLI model confirmed entailment from evidence (confidence: 0.97)."
+            }
+          ]
+        },
+        {
+          "claim": "the finance department",
+          "consensus": 1.0,
+          "evidence": [
+            {
+              "doc": "hr_policy_reimbursement.txt",
+              "text": "All reimbursement claims above 5,000 INR require approval from both the reporting manager and the finance department.",
+              "similarity": 0.343,
+              "label": "ENTAILMENT",
+              "reason": "NLI model confirmed entailment from evidence (confidence: 0.916)."
+            }
+          ]
+        }
+      ],
+      "explanation": "All claims are well supported by retrieved evidence with no contradictions detected."
+    },
+    "hallucinated_answer": "It requires finance department approval because the expense was incurred on an international business trip.",
+    "hallucinated_verification": {
+      "query": "Why does a 6,000 INR expense claim need approval from the finance department?",
+      "answer": "It requires finance department approval because the expense was incurred on an international business trip.",
+      "trust_score": 50.0,
+      "status": "Uncertain",
+      "claims": [
+        {
+          "claim": "It requires finance department approval because the expense was incurred on an international business trip",
+          "consensus": 0.0,
+          "evidence": [
+            {
+              "doc": "hr_policy_reimbursement.txt",
+              "text": "All reimbursement claims above 5,000 INR require approval from both the reporting manager and the finance department.",
+              "similarity": 0.446,
+              "label": "NEUTRAL",
+              "reason": "Evidence neither entails nor directly contradicts claim (confidence: 0.997)."
+            }
+          ]
+        }
+      ],
+      "explanation": "Claim \"It requires finance department approval because the expense was incurred on an international business trip\" is not strongly supported by any retrieved evidence (low consensus score: 0.0)."
+    }
+  }
+]

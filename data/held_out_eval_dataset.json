@@ -1,0 +1,102 @@
+[
+  {
+    "id": "heldout_01",
+    "query": "Which identity management platform handles corporate multi-factor authentication?",
+    "source_doc": "it_security_policy.txt",
+    "source_passage": "All corporate systems require multi-factor authentication managed through Okta.",
+    "correct_answer": "Multi-factor authentication for corporate systems is managed through Okta.",
+    "hallucinated_answer": "Multi-factor authentication for corporate systems is managed through 1Password.",
+    "error_type": "entity_swap",
+    "error_explanation": "Okta was replaced with 1Password."
+  },
+  {
+    "id": "heldout_02",
+    "query": "Who must approve requests for privileged access in writing?",
+    "source_doc": "it_security_policy.txt",
+    "source_passage": "Requests for privileged access must be approved in writing by the Chief Information Security Officer (CISO).",
+    "correct_answer": "Requests for privileged access must be approved in writing by the Chief Information Security Officer (CISO).",
+    "hallucinated_answer": "Requests for privileged access must be approved in writing by the Chief Technology Officer (CTO).",
+    "error_type": "entity_swap",
+    "error_explanation": "Chief Information Security Officer (CISO) was swapped for Chief Technology Officer (CTO)."
+  },
+  {
+    "id": "heldout_03",
+    "query": "Which internal communication tool is prohibited for sharing access credentials?",
+    "source_doc": "it_security_policy.txt",
+    "source_passage": "Access credentials must never be shared over Slack or external messaging tools.",
+    "correct_answer": "Access credentials must never be shared over Slack or external messaging tools.",
+    "hallucinated_answer": "Access credentials must never be shared over Microsoft Teams or external messaging tools.",
+    "error_type": "entity_swap",
+    "error_explanation": "Slack was replaced with Microsoft Teams."
+  },
+  {
+    "id": "heldout_04",
+    "query": "What hardware security device is provided to employees working with sensitive source code?",
+    "source_doc": "it_security_policy.txt",
+    "source_passage": "Employees handling sensitive source code are issued a YubiKey hardware security key for cryptographic authentication.",
+    "correct_answer": "Employees handling sensitive source code are issued a YubiKey hardware security key for cryptographic authentication.",
+    "hallucinated_answer": "Employees handling sensitive source code are issued an RSA SecurID token for cryptographic authentication.",
+    "error_type": "entity_swap",
+    "error_explanation": "YubiKey was replaced with RSA SecurID token."
+  },
+  {
+    "id": "heldout_05",
+    "query": "Who must be immediately alerted in case of a suspected security breach?",
+    "source_doc": "it_security_policy.txt",
+    "source_passage": "In the event of a suspected security breach, employees must immediately notify the Security Operations Center (SOC).",
+    "correct_answer": "In the event of a suspected security breach, employees must immediately notify the Security Operations Center (SOC).",
+    "hallucinated_answer": "In the event of a suspected security breach, employees must immediately notify the Network Operations Center (NOC).",
+    "error_type": "entity_swap",
+    "error_explanation": "Security Operations Center (SOC) was replaced with Network Operations Center (NOC)."
+  },
+  {
+    "id": "heldout_06",
+    "query": "To which department must lost or stolen devices be reported within 2 hours?",
+    "source_doc": "it_security_policy.txt",
+    "source_passage": "Lost or stolen devices must be reported to the IT Service Desk within 2 hours.",
+    "correct_answer": "Lost or stolen devices must be reported to the IT Service Desk within 2 hours.",
+    "hallucinated_answer": "Lost or stolen devices must be reported to the Facilities Helpdesk within 2 hours.",
+    "error_type": "entity_swap",
+    "error_explanation": "IT Service Desk was replaced with Facilities Helpdesk."
+  },
+  {
+    "id": "heldout_07",
+    "query": "Which cloud provider is approved for deploying corporate production workloads?",
+    "source_doc": "it_security_policy.txt",
+    "source_passage": "Corporate production workloads may only be deployed to Amazon Web Services (AWS).",
+    "correct_answer": "Corporate production workloads may only be deployed to Amazon Web Services (AWS).",
+    "hallucinated_answer": "Corporate production workloads may only be deployed to Microsoft Azure.",
+    "error_type": "entity_swap",
+    "error_explanation": "Amazon Web Services (AWS) was replaced with Microsoft Azure."
+  },
+  {
+    "id": "heldout_08",
+    "query": "What travel booking platform must be used to reserve official business travel accommodations?",
+    "source_doc": "it_security_policy.txt",
+    "source_passage": "Official business travel accommodations must be reserved exclusively through the Concur corporate travel portal.",
+    "correct_answer": "Official business travel accommodations must be reserved exclusively through the Concur corporate travel portal.",
+    "hallucinated_answer": "Official business travel accommodations must be reserved exclusively through the Expedia Corporate travel portal.",
+    "error_type": "entity_swap",
+    "error_explanation": "Concur was replaced with Expedia Corporate."
+  },
+  {
+    "id": "heldout_09",
+    "query": "Which employee roles can receive phone bill reimbursement?",
+    "source_doc": "hr_policy_reimbursement.txt",
+    "source_passage": "Phone bill reimbursement of up to 500 INR per month is available to employees in sales and client-facing roles only.",
+    "correct_answer": "Phone bill reimbursement is available only to employees in sales and client-facing roles.",
+    "hallucinated_answer": "Phone bill reimbursement is available only to employees in marketing and human resources roles.",
+    "error_type": "entity_swap",
+    "error_explanation": "Sales and client-facing roles was swapped for marketing and human resources roles."
+  },
+  {
+    "id": "heldout_10",
+    "query": "How many days per week can customer-facing employees work from home?",
+    "source_doc": "hr_policy_wfh.txt",
+    "source_passage": "Employees in customer-facing roles may work from home up to 1 day per week only.",
+    "correct_answer": "Employees in customer-facing roles may work from home up to 1 day per week only.",
+    "hallucinated_answer": "Employees in backend engineering roles may work from home up to 1 day per week only.",
+    "error_type": "entity_swap",
+    "error_explanation": "Customer-facing roles was swapped for backend engineering roles."
+  }
+]

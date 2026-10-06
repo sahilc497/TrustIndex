@@ -1,0 +1,183 @@
+{
+  "mcnemar": {
+    "A vs B (Base Prompt: Baseline vs SBERT Re-rank)": {
+      "k1": "cond_a",
+      "k2": "cond_b",
+      "k1_hallu": 18,
+      "k1_hallu_pct": 23.4,
+      "k2_hallu": 21,
+      "k2_hallu_pct": 27.3,
+      "a_both_H": 16,
+      "b_k1H_k2NH": 2,
+      "c_k1NH_k2H": 5,
+      "d_both_NH": 54,
+      "n_discordant": 7,
+      "chi2_continuity": 0.5714,
+      "p_exact": 0.453125,
+      "p_exact_fmt": "0.4531",
+      "significant_p05": false
+    },
+    "A vs C (Baseline Ret: Baseline vs Citation Prompt)": {
+      "k1": "cond_a",
+      "k2": "cond_c",
+      "k1_hallu": 18,
+      "k1_hallu_pct": 23.4,
+      "k2_hallu": 17,
+      "k2_hallu_pct": 22.1,
+      "a_both_H": 11,
+      "b_k1H_k2NH": 7,
+      "c_k1NH_k2H": 6,
+      "d_both_NH": 53,
+      "n_discordant": 13,
+      "chi2_continuity": 0.0,
+      "p_exact": 1.0,
+      "p_exact_fmt": "1.0000",
+      "significant_p05": false
+    },
+    "A vs D (Baseline vs Full Improved)": {
+      "k1": "cond_a",
+      "k2": "cond_d",
+      "k1_hallu": 18,
+      "k1_hallu_pct": 23.4,
+      "k2_hallu": 24,
+      "k2_hallu_pct": 31.2,
+      "a_both_H": 10,
+      "b_k1H_k2NH": 8,
+      "c_k1NH_k2H": 14,
+      "d_both_NH": 45,
+      "n_discordant": 22,
+      "chi2_continuity": 1.1364,
+      "p_exact": 0.28627872467041016,
+      "p_exact_fmt": "0.2863",
+      "significant_p05": false
+    },
+    "B vs D (SBERT Ret: Baseline vs Citation Prompt)": {
+      "k1": "cond_b",
+      "k2": "cond_d",
+      "k1_hallu": 21,
+      "k1_hallu_pct": 27.3,
+      "k2_hallu": 24,
+      "k2_hallu_pct": 31.2,
+      "a_both_H": 13,
+      "b_k1H_k2NH": 8,
+      "c_k1NH_k2H": 11,
+      "d_both_NH": 45,
+      "n_discordant": 19,
+      "chi2_continuity": 0.2105,
+      "p_exact": 0.6476058959960938,
+      "p_exact_fmt": "0.6476",
+      "significant_p05": false
+    },
+    "C vs D (Citation Prompt: Baseline vs SBERT Re-rank)": {
+      "k1": "cond_c",
+      "k2": "cond_d",
+      "k1_hallu": 17,
+      "k1_hallu_pct": 22.1,
+      "k2_hallu": 24,
+      "k2_hallu_pct": 31.2,
+      "a_both_H": 16,
+      "b_k1H_k2NH": 1,
+      "c_k1NH_k2H": 8,
+      "d_both_NH": 52,
+      "n_discordant": 9,
+      "chi2_continuity": 4.0,
+      "p_exact": 0.0390625,
+      "p_exact_fmt": "0.0391",
+      "significant_p05": true
+    }
+  },
+  "samples": [
+    {
+      "sample_num": 1,
+      "id": "leave_09",
+      "query": "How many weeks of paternity leave do male employees get?",
+      "retrieved_passages": [
+        "Section 3: Maternity and Paternity Leave Female employees are entitled to 26 weeks of paid maternity leave. Male employees are entitled to 2 weeks of paid paternity leave. Maternity leave must be applied for at least 8 weeks before the expected delivery date. Adoption leave of 12 weeks is available to employees who legally adopt a child under the age of 1.",
+        "Section 1: Annual Leave Employees are entitled to 20 annual paid leaves per calendar year. Unused annual leave can be carried forward to the next year for a maximum of 1 year. Annual leave must be requested at least 3 working days in advance through the HR portal. Employees who resign are paid out for unused annual leave at their final gross salary rate."
+      ],
+      "cond_a": {
+        "answer": "Male employees are entitled to 2 weeks of paid paternity leave.",
+        "trust_score": 62.8,
+        "status": "Uncertain",
+        "num_claims": 1,
+        "explanation": "Claim \"Male employees are entitled to 2 weeks of paid paternity leave\" contradicts evidence from hr_policy_leave.txt: Claim contains number(s) ['2'] not present in evidence (evidence contains ['1', '20', '3']); likely numeric substitution."
+      },
+      "cond_c": {
+        "answer": "Male employees are entitled to 2 weeks of paid paternity leave.",
+        "trust_score": 62.8,
+        "status": "Uncertain",
+        "num_claims": 1,
+        "explanation": "Claim \"Male employees are entitled to 2 weeks of paid paternity leave\" contradicts evidence from hr_policy_leave.txt: Claim contains number(s) ['2'] not present in evidence (evidence contains ['1', '20', '3']); likely numeric substitution."
+      }
+    },
+    {
+      "sample_num": 2,
+      "id": "wfh_05",
+      "query": "How many work-from-home days do customer-facing employees get?",
+      "retrieved_passages": [
+        "Section 2: Frequency Eligible employees may work from home up to 2 days per week. Employees in customer-facing roles may work from home up to 1 day per week only. Full-time remote work (5 days per week) requires written approval from the department head and HR director jointly.",
+        "Section 1: Eligibility Employees who have completed 6 months of continuous employment are eligible to apply for work-from-home arrangements. Employees still on probation are not eligible for work from home under any circumstances. Approval is granted by the direct reporting manager and must be renewed every 6 months."
+      ],
+      "cond_a": {
+        "answer": "Section 2: Frequency Eligible employees may work from home up to 2 days per week. Employees in customer-facing roles may work from home up to 1 day per week only. Section 1: Eligibility Employees who have completed 6 months of continuous employment are eligible to apply for work-from-home arrangements. Employees still on probation are not eligible for work from home under any circumstances. Approval is granted by the direct reporting manager",
+        "trust_score": 57.4,
+        "status": "Uncertain",
+        "num_claims": 5,
+        "explanation": "Claim \"Section 2: Frequency Eligible employees may work from home up to 2 days per week\" contradicts evidence from hr_policy_wfh.txt: Claim contains number(s) ['2'] not present in evidence (evidence contains ['1', '6']); likely numeric substitution."
+      },
+      "cond_c": {
+        "answer": "Section 2: Employees in customer-facing roles may work from home up to 1 day per week only.",
+        "trust_score": 58.9,
+        "status": "Uncertain",
+        "num_claims": 1,
+        "explanation": "Claim \"Section 2: Employees in customer-facing roles may work from home up to 1 day per week only\" contradicts evidence from hr_policy_wfh.txt: Claim contains number(s) ['2'] not present in evidence (evidence contains ['1', '6']); likely numeric substitution."
+      }
+    },
+    {
+      "sample_num": 3,
+      "id": "wfh_06",
+      "query": "Who must approve full-time remote work?",
+      "retrieved_passages": [
+        "Section 2: Frequency Eligible employees may work from home up to 2 days per week. Employees in customer-facing roles may work from home up to 1 day per week only. Full-time remote work (5 days per week) requires written approval from the department head and HR director jointly.",
+        "Section 1: Eligibility Employees who have completed 6 months of continuous employment are eligible to apply for work-from-home arrangements. Employees still on probation are not eligible for work from home under any circumstances. Approval is granted by the direct reporting manager and must be renewed every 6 months."
+      ],
+      "cond_a": {
+        "answer": "Employees who have completed 6 months of continuous employment are eligible to apply for work-from-home arrangements. Employees still on probation are not eligible for work from home under any circumstances. Approval is granted by the direct reporting manager and must be renewed every 6 months.",
+        "trust_score": 58.1,
+        "status": "Uncertain",
+        "num_claims": 4,
+        "explanation": "Claim \"Employees who have completed 6 months of continuous employment are eligible to apply for work-from-home arrangements\" contradicts evidence from hr_policy_wfh.txt: Claim contains number(s) ['6'] not present in evidence (evidence contains ['1', '2', '5']); likely numeric substitution."
+      },
+      "cond_c": {
+        "answer": "Employees who have completed 6 months of continuous employment are eligible to apply for work-from-home arrangements.",
+        "trust_score": 58.1,
+        "status": "Uncertain",
+        "num_claims": 1,
+        "explanation": "Claim \"Employees who have completed 6 months of continuous employment are eligible to apply for work-from-home arrangements\" contradicts evidence from hr_policy_wfh.txt: Claim contains number(s) ['6'] not present in evidence (evidence contains ['1', '2', '5']); likely numeric substitution."
+      }
+    },
+    {
+      "sample_num": 4,
+      "id": "reimb_04",
+      "query": "What is the daily meal allowance for international travel?",
+      "retrieved_passages": [
+        "Section 2: Meal Allowance Employees on official travel receive a daily meal allowance of 1,200 INR within India and 40 USD for international travel. Alcohol is not reimbursable under any circumstances.",
+        "Section 3: Equipment The company provides a laptop and a one-time home office setup allowance of 15,000 INR for employees approved for permanent remote work. This allowance is not provided for employees on the standard 2-day hybrid arrangement."
+      ],
+      "cond_a": {
+        "answer": "The daily meal allowance for international travel is 40 USD.",
+        "trust_score": 85.8,
+        "status": "Trusted",
+        "num_claims": 1,
+        "explanation": "All claims are well supported by retrieved evidence with no contradictions detected."
+      },
+      "cond_c": {
+        "answer": "The daily meal allowance for international travel is 40 USD.",
+        "trust_score": 85.8,
+        "status": "Trusted",
+        "num_claims": 1,
+        "explanation": "All claims are well supported by retrieved evidence with no contradictions detected."
+      }
+    }
+  ]
+}
